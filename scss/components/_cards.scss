@@ -1,0 +1,438 @@
+.project {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 40px;
+
+  &__description-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    border-bottom: 1px solid #e2e2e2;
+    order: 0;
+  }
+
+  &__title {
+    font-family: "San Francisco Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+
+    color: #222222;
+  }
+  &__subtitle {
+    margin-top: 10px;
+
+    font-family: "San Francisco Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #8e8e8e;
+  }
+
+  &__image {
+    min-height: 280px;
+    width: 100%;
+    object-fit: cover;
+
+    order: 1;
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-gap: 0;
+
+    &__description-block {
+      order: 1;
+    }
+    &__title {
+      margin-top: 20px;
+      font-size: 34px;
+    }
+    &__subtitle {
+      margin-bottom: 60px;
+    }
+
+    &__image {
+      min-height: 100%;
+      width: 100%;
+      order: 0;
+    }
+  }
+}
+
+@media screen and (max-device-width: 576px) {
+  .project {
+    &__title {
+      margin-top: 20px;
+      font-size: 26px;
+    }
+    &__subtitle {
+      margin-bottom: 40px;
+      font-size: 12px;
+    }
+  }
+}
+
+.project-left {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 40px;
+
+  &__description-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    border-bottom: 1px solid #e2e2e2;
+    order: 0;
+  }
+
+  &__title {
+    font-family: "San Francisco Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+
+    color: #222222;
+  }
+  &__subtitle {
+    margin-top: 10px;
+
+    font-family: "San Francisco Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #8e8e8e;
+  }
+
+  &__image {
+    min-height: 280px;
+    width: 100%;
+    object-fit: cover;
+
+    order: 1;
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  .project-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-gap: 0;
+
+    &__description-block {
+      order: 1;
+    }
+    &__title {
+      margin-top: 20px;
+      font-size: 34px;
+    }
+    &__subtitle {
+      margin-bottom: 60px;
+    }
+
+    &__image {
+      min-height: 100%;
+      width: 100%;
+      order: 0;
+    }
+  }
+}
+
+@media screen and (max-device-width: 576px) {
+  .project-left {
+    &__title {
+      margin-top: 20px;
+      font-size: 26px;
+    }
+    &__subtitle {
+      margin-bottom: 40px;
+      font-size: 12px;
+    }
+  }
+}
+
+.project-right {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 40px;
+
+  &__description-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    border-bottom: 1px solid #e2e2e2;
+    order: 1;
+  }
+
+  &__title {
+    font-family: "San Francisco Pro Display";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+
+    color: #222222;
+  }
+  &__subtitle {
+    margin-top: 10px;
+
+    font-family: "San Francisco Pro Display";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+
+    color: #8e8e8e;
+  }
+
+  &__image {
+    min-height: 280px;
+    width: 100%;
+    object-fit: cover;
+
+    order: 0;
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  .project-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-gap: 0;
+
+    &__description-block {
+      order: 1;
+    }
+    &__title {
+      margin-top: 20px;
+      font-size: 34px;
+    }
+    &__subtitle {
+      margin-bottom: 60px;
+    }
+
+    &__image {
+      min-height: 100%;
+      width: 100%;
+      order: 0;
+    }
+  }
+}
+
+@media screen and (max-device-width: 576px) {
+  .project-right {
+    &__title {
+      margin-top: 20px;
+      font-size: 26px;
+    }
+    &__subtitle {
+      margin-bottom: 40px;
+      font-size: 12px;
+    }
+  }
+}
+
+
+
+.service-card {
+  &__number {
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    color: setColor(text, primary);
+  }
+  &__title {
+    margin-top: 80px;
+
+    font-size: 32px;
+    line-height: 150%;
+    font-weight: 500;
+
+    color: setColor(text, primary);
+  }
+  &__text {
+    margin-top: 40px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+
+    color: setColor(text, secondary);
+  }
+  &__list {
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+  border-bottom: 1px solid #e2e2e2;
+}
+
+@media screen and (max-device-width: 768px) {
+  .service-card {
+    &__title {
+      margin-top: 60px;
+      font-size: 28px;
+    }
+    &__text {
+      margin-top: 40px;
+    }
+    &__list {
+      margin-top: 40px;
+      margin-bottom: 80px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 576px) {
+  .service-card {
+    &__number {
+      font-size: 16px;
+      line-height: 19px;
+    }
+    &__title {
+      margin-top: 40px;
+      font-size: 28px;
+    }
+    &__text {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    &__list {
+      margin-top: 40px;
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.stage-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 40px;
+  padding: 40px 0;
+  border-bottom: 1px solid #dadada;
+
+  &:first-child {
+    border-top: 1px solid #dadada;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+
+    color: setColor(text, primary);
+  }
+  &__description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+
+    color: setColor(text, secondary);
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  .stage-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__description {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 576px) {
+  .stage-card {
+    &__title {
+      font-size: 18px;
+    }
+    &__description {
+      font-size: 14px;
+    }
+  }
+}
+
+.award-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 40px 0;
+  border-bottom: 1px solid #e2e2e2;
+  &:first-child {
+    border-top: 1px solid #e2e2e2;
+  }
+
+  &__year,
+  &__author {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+
+    color: #8e8e8e;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+
+    color: #222222;
+  }
+}
+@media screen and (max-device-width: 768px) {
+  .award-card {
+    &__year,
+    &__author {
+      font-size: 12px;
+    }
+    &__title {
+      max-width: 300px;
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 576px) {
+  .award-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 0;
+    &__year,
+    &__author {
+      font-size: 12px;
+    }
+    &__author {
+      margin-top: 20px;
+    }
+
+    &__title {
+      text-align: left;
+      line-height: 160%;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  }
+}

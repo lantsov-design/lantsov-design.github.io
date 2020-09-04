@@ -1,0 +1,446 @@
+/*------------------------------------------------------------------------------------------
+Call to action first screen - Style
+------------------------------------------------------------------------------------------*/
+.cta {
+  &__wrapper {
+    min-height: 500px;
+  }
+  &__title {
+    font-size: setFontSize(desktop, h1);
+    letter-spacing: 0.02em;
+    font-weight: 300;
+    font-style: normal;
+
+    color: setColor(text, main);
+  }
+
+  &__text {
+    margin-top: 52px;
+    font-size: setFontSize(desktop, cta_text);
+    line-height: 160%;
+    font-style: normal;
+
+    color: setColor(text, main);
+  }
+
+  &__buttons-block {
+    margin-top: 60px;
+  }
+}
+.watch_projects {
+  margin-left: 60px;
+}
+
+@media screen and (max-device-width: 1040px) {
+  .cta {
+    &__title {
+      font-size: setFontSize(tablet_p, h1);
+    }
+    &__text {
+      margin-top: 30px;
+      font-size: setFontSize(tablet_p, cta_text);
+    }
+    &__button-wrapper {
+      display: none;
+    }
+    &__title {
+      text-align: center;
+    }
+    &__text {
+      text-align: center;
+      max-width: 700px;
+    }
+  }
+  .watch_projects {
+    margin-top: 40px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  .cta {
+    &__text {
+      max-width: 440px;
+    }
+    &__buttons-block {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 576px) {
+  .cta {
+    padding-top: 80px;
+    &__title {
+      font-size: setFontSize(mobile, h1);
+    }
+    &__text {
+      margin-top: 20px;
+
+      font-size: setFontSize(mobile, cta_text);
+    }
+  }
+
+  .watch_projects {
+    margin-left: 0;
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+About me - Style
+------------------------------------------------------------------------------------------*/
+.about-me {
+  margin-top: 180px;
+  padding-top: 80px;
+
+  &__text-block {
+    min-height: 484px;
+
+    border-bottom: 1px solid #e2e2e2;
+  }
+  &__title {
+    font-size: setFontSize(desktop, h3);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-style: normal;
+
+    color: setColor(text, main);
+  }
+  &__text {
+    margin-top: 80px;
+    margin-bottom: 100px;
+
+    font-size: setFontSize(desktop, p);
+    line-height: 160%;
+    font-style: normal;
+    font-weight: 400;
+    max-width: 680px;
+
+    color: setColor(text, secondary);
+  }
+
+  &__skills {
+    min-height: 484px;
+
+    border-bottom: 1px solid #e2e2e2;
+  }
+  &__list-margin {
+    margin-top: 80px;
+    margin-bottom: 100px;
+  }
+}
+.more {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-device-width: 768px) {
+  .about-me {
+    margin-top: 220px;
+    padding-top: 0;
+
+    &__text-block {
+      min-height: 0;
+      border-bottom: none;
+    }
+    &__title {
+      font-size: setFontSize(tablet_p, h3);
+    }
+    &__text {
+      margin-top: 60px;
+      margin-bottom: 80px;
+
+      font-size: setFontSize(tablet_p, p);
+    }
+
+    &__skills {
+      margin-top: 80px;
+
+      min-height: 0;
+    }
+    &__list-margin {
+      margin-top: 60px;
+      margin-bottom: 80px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 576px) {
+  .about-me {
+    margin-top: 180px;
+
+    &__title {
+      font-size: setFontSize(mobile, h3);
+    }
+    &__text {
+      margin-bottom: 60px;
+
+      font-size: setFontSize(mobile, p);
+    }
+
+    &__skills {
+      margin-top: 60px;
+    }
+    &__list-margin {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+  }
+  .more {
+    margin-bottom: 20px;
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+Projects - Style
+------------------------------------------------------------------------------------------*/
+.projects {
+  margin-top: 200px;
+
+  &__title {
+    font-size: setFontSize(desktop, h3);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-style: normal;
+
+    color: setColor(text, main);
+  }
+  &__big-text {
+    font-size: 110px;
+    line-height: 110%;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    font-style: normal;
+    text-align: right;
+
+    color: #e0e0e0;
+  }
+}
+.project {
+  margin-top: 80px;
+}
+
+@media screen and (max-device-width: 1024px) {
+  .projects {
+    &__big-text {
+      font-size: 83px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  .projects {
+    margin-top: 160px;
+
+    &__big-text {
+      font-size: 59px;
+    }
+    &__title {
+      font-size: setFontSize(tablet_p, h3);
+    }
+  }
+  .project {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-device-width: 576px) {
+  .projects {
+    margin-top: 120px;
+
+    &__big-text {
+      font-size: 34px;
+    }
+    &__title {
+      font-size: setFontSize(mobile, h3);
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+Quote - Style
+------------------------------------------------------------------------------------------*/
+.quote {
+  margin-top: 200px;
+  &__wrapper {
+    position: relative;
+  }
+  &__quote-wrapper {
+    min-height: 170px;
+    padding: 0px 40px 24px 40px;
+
+    background-image: url("../img/ui/quotes-decorator-left.svg"),
+      url("../img/ui/quotes-decorator-right.svg");
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+  }
+  &__text {
+    text-align: center;
+    font-size: setFontSize(desktop, quote);
+    line-height: 160%;
+    font-weight: 400;
+
+    color: setColor(text, secondary);
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  .quote {
+    margin-top: 160px;
+    &__quote-wrapper {
+      min-height: 182px;
+
+      background-image: url("../img/ui/quotes-decorator-left-mobile.svg"),
+        url("../img/ui/quotes-decorator-right-mobile.svg");
+      background-position: left top, right bottom;
+      background-repeat: no-repeat, no-repeat;
+    }
+    &__text {
+      font-size: setFontSize(mobile, quote);
+    }
+  }
+}
+
+@media screen and (max-device-width: 576px) {
+  .quote {
+    margin-top: 120px;
+    &__quote-wrapper {
+      padding: 0px 20px 12px 20px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 320px) {
+  .quote {
+    &__quote-wrapper {
+      padding: 0px 0px 12px 0px;
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+Services - Style
+------------------------------------------------------------------------------------------*/
+.services {
+  margin-top: 200px;
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: setFontSize(desktop, h3);
+    line-height: 21px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: setColor(text, main);
+  }
+}
+@media screen and (max-device-width: 1040px) {
+  .services {
+    margin-top: 160px;
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  .services {
+    &__title {
+      margin-bottom: 60px;
+    }
+  }
+  .service-card {
+    margin-bottom: 80px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+@media screen and (max-device-width: 576px) {
+  .services {
+    margin-top: 120px;
+    &__title {
+      margin-bottom: 60px;
+      font-size: 16px;
+    }
+  }
+  .service-card {
+    margin-bottom: 60px;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+Stages - Style
+------------------------------------------------------------------------------------------*/
+.stages {
+  margin-top: 200px;
+  &__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: setFontSize(desktop, h3);
+    line-height: 21px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    color: setColor(text, main);
+  }
+  &__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: setFontSize(desktop, p);
+    line-height: 160%;
+
+    color: setColor(text, main);
+  }
+  &__margin-btn {
+    margin-top: 40px;
+  }
+
+  &__stage-block {
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  .stages {
+    margin-top: 160px;
+    &__title-block {
+      @include flex_column;
+    }
+    &__text-block {
+      margin-top: 60px;
+    }
+    &__text {
+      font-size: setFontSize(tablet_p, p);
+    }
+    &__stage-block {
+      margin-top: 60px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 576px) {
+  .stages {
+    margin-top: 80px;
+
+    &__title {
+      font-size: setFontSize(mobile, h3);
+      line-height: 19px;
+    }
+  }
+}
+
+.footer {
+  margin-top: 260px;
+}
+@media screen and (max-device-width: 768px) {
+  .footer {
+    margin-top: 220px;
+  }
+}
+@media screen and (max-device-width: 576px) {
+  .footer {
+    margin-top: 180px;
+  }
+}

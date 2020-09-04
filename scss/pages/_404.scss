@@ -1,0 +1,40 @@
+.error {
+  &__wrapper {
+    @include flex_column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__message, &__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    text-align: center;
+
+    color: setColor(text, main);
+  }
+  &__message {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-device-width: 768px) {
+  .error {
+    &__icon {
+      width: 400px;
+    }
+  }
+}
+@media screen and (max-device-width: 576px) {
+  .error {
+    padding-top: 80px;
+    &__icon {
+      width: 208px;
+    }
+    &__message, &__link {
+      font-size: 16px;
+    }
+    &__message {
+      margin-top: 40px;
+    }
+  }
+}

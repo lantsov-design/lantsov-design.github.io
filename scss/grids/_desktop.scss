@@ -1,0 +1,117 @@
+.container {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1140px;
+}
+
+@media screen and (max-device-width: 576px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+Call to action first screen - Grid
+------------------------------------------------------------------------------------------*/
+.cta {
+  &__wrapper {
+    @include grid_row_2_1;
+  }
+
+  &__content-block {
+    @include flex_column;
+    justify-content: center;
+  }
+
+  &__button-wrapper {
+    @include flex_column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  &__buttons-block {
+    @include flex_row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+About me - Grid
+------------------------------------------------------------------------------------------*/
+.about-me {
+  &__wrapper {
+    @include grid_row_2_1;
+  }
+  &__skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+Projects - Grid
+------------------------------------------------------------------------------------------*/
+.projects {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  &__title-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+Quote - Grid
+------------------------------------------------------------------------------------------*/
+.quote {
+  &__quote-wrapper {
+    @include flex_column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+Services - Grid
+------------------------------------------------------------------------------------------*/
+.services {
+  &__wrapper {
+    @include grid_row_1_1_1;
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+Stages - Grid
+------------------------------------------------------------------------------------------*/
+.stages {
+  &__title-block {
+    @include grid_row_1_2;
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+About - Grid (About page)
+------------------------------------------------------------------------------------------*/
+.about {
+  &__wrapper {
+    @include grid_row_2_1;
+  }
+  &__about-me-block {
+    @include flex_column;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  .about {
+    &__wrapper {
+      @include flex_column;
+    }
+  }
+}

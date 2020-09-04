@@ -1,0 +1,140 @@
+.contact-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.contacts-content {
+  &__wrapper {
+    @include grid_row_1_2;
+  }
+  &__info-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__social-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__cta {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 160%;
+    max-width: 350px;
+
+    color: setColor(text, main);
+    span {
+      padding-bottom: 2px;
+      border-bottom: 2px solid #222;
+    }
+  }
+  &__mail-link {
+    width: 290px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 160%;
+    text-decoration: none;
+
+    color: setColor(text, main);
+  }
+  &__social-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+    transition: color ease-in 0.6s;
+    color: setColor(text, secondary);
+    text-decoration: none;
+
+    &:hover {
+      transition: color ease-in 0.6s;
+      color: setColor(text, main);
+    }
+  }
+}
+
+.contacts-footer {
+  &__border {
+    border-top: 1px solid #e2e2e2;
+  }
+}
+
+@media screen and (max-device-width: 1040px) {
+  .contacts-content {
+    &__wrapper {
+      @include flex_column;
+      gap: 0;
+      align-items: center;
+    }
+    &__info-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__social-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    &__cta {
+      text-align: center;
+      margin-bottom: 100px;
+    }
+    &__mail-link {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    &__social-link {
+      padding: 20px;
+    }
+  }
+}
+@media screen and (max-device-width: 768px) {
+  .contacts-content {
+
+    &__cta {
+      max-width: 280px;
+      font-size: 20px;
+      margin-bottom: 80px;
+    }
+    &__mail-link {
+      width: 220px;
+      font-size: 20px;
+    }
+    &__social-link {
+      width: 120px;
+      padding: 20px 10px 0 10px;
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-device-width: 568px) {
+  .contacts-content {
+    padding-top: 120px;
+    padding-bottom: 40px;
+    &__cta {
+      max-width: 280px;
+      font-size: 20px;
+      margin-bottom: 80px;
+    }
+    &__mail-link {
+      width: 220px;
+      font-size: 20px;
+    }
+    &__social-link {
+      width: 120px;
+      padding: 20px 10px 0 10px;
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}

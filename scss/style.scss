@@ -1,0 +1,32 @@
+// Core of project
+@import './core/reset';
+@import './core/core';
+@import './core/includefonts';
+
+// Abstracts elements
+@import './abstract/functions';
+@import './abstract/mixins';
+
+// Settings
+@import './settings/fonts';
+@import './settings/colors';
+
+// Library of components
+@import './components/buttons';
+@import './components/cards';
+@import './components/lists';
+@import './components/decorate';
+@import './components/header';
+@import './components/footer';
+
+// Grid system
+@import './grids/desktop';
+@import './grids/tablets';
+@import './grids/mobile';
+
+// Pages style
+@import './pages/main';
+@import './pages/about';
+@import './pages/projects';
+@import './pages/contacts';
+@import './pages/404';

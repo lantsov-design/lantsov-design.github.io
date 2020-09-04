@@ -1,0 +1,26 @@
+$fonts: (
+  desktop: (
+    menu: 16px,
+    h1: 70px,
+    h2: 32px,
+    h3: 18px,
+    cta_text: 20px,
+    p: 18px,
+    quote: 16px,
+    about-card: 16px
+  ),
+  tablet_p: (
+    h1: 56px,
+    h3: 18px,
+    cta_text: 18px,
+    p: 16px,
+  ),
+  mobile: (
+    h1: 34px,
+    h3: 16px,
+    cta_text: 16px,
+    p: 14px,
+    quote: 14px,
+    about-card: 14px
+  ),
+);

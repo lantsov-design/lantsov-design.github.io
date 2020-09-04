@@ -1,0 +1,31 @@
+.small-list {
+  &__item {
+    margin-top: 20px;
+    margin-left: 18px;
+    padding-left: 10px;
+    font-size: 16px;
+    line-height: 160%;
+
+    color: setColor(text, secondary);
+    list-style-type: disc;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (max-device-width: 576px) {
+  .small-list {
+    &__item {
+      margin-top: 20px;
+      margin-left: 18px;
+      padding-left: 0;
+      font-size: 14px;
+  
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

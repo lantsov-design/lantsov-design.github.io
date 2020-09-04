@@ -1,0 +1,66 @@
+/*------------------------------------------------------------------------------------------
+Call to action first screen - Grid
+------------------------------------------------------------------------------------------*/
+@media screen and (max-device-width: 1040px) {
+  .cta {
+    &__wrapper {
+      @include flex_column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__buttons-block {
+      @include flex_column;
+      align-items: center;
+    }
+  }
+}
+@media screen and (max-device-width: 768px) {
+  .cta {
+    &__wrapper {
+      @include flex_column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__buttons-block {
+      @include flex_column;
+      align-items: center;
+    }
+  }
+}
+
+
+
+/*------------------------------------------------------------------------------------------
+About me - Grid
+------------------------------------------------------------------------------------------*/
+@media screen and (max-device-width: 768px) {
+  .about-me {
+    &__wrapper {
+      @include flex_column;
+      justify-content: flex-start;
+      align-items: space-between;
+      grid-gap: 0;
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+Services - Grid
+------------------------------------------------------------------------------------------*/
+@media screen and (max-device-width: 1040px) {
+  .services {
+    &__wrapper {
+      @include grid_row_1_1;
+    }
+  }
+}
+
+@media screen and (max-device-width: 768px) {
+  .services {
+    &__wrapper {
+      @include flex_column;
+      column-gap: 0;
+      row-gap: 0;
+    }
+  }
+}

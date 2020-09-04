@@ -1,0 +1,13 @@
+/*------------------------------------------------------------------------------------------
+Call to action first screen - Grid
+------------------------------------------------------------------------------------------*/
+@media screen and (max-device-width: 576px) {
+  .cta {
+    &__wrapper {
+      align-items: center;
+    }
+    &__buttons-block {
+      align-items: center;
+    }
+  }
+}

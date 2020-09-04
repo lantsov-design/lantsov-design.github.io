@@ -1,0 +1,180 @@
+.mobile-menu {
+  display: block;
+  position: relative;
+  border: none;
+  width: 26px;
+  height: 18px;
+  background: none;
+
+  &:before,
+  &:after {
+    content: '';
+    background-color: #222;
+    position: absolute;
+    height: 2px;
+    right: 0;
+    transition: all ease-in 0.3s;
+  }
+  &:before {
+    width: 26px;
+    top: 0;
+  }
+  &:after {
+    width: 14px;
+    bottom: 0;
+  }
+  &__span {
+    position: absolute;
+    background-color: #222;
+    right: 0;
+    width: 20px;
+    height: 2px;
+    top: 8px;
+    transition: all ease-in 0.3s;
+    animation-name: burger-animate;
+  }
+}
+
+.mobile-menu.active:before {
+  transform: rotate(45deg);
+  top: 8px;
+}
+.mobile-menu.active:after {
+  transform: rotate(-45deg);
+  width: 26px;
+  bottom: 8px;
+}
+.mobile-menu.active span{
+  transform: scale(0);
+}
+
+.scroll-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 16px;
+  text-decoration: none;
+
+  border: none;
+  background: none;
+  &:focus {
+    outline: none;
+  }
+
+  &__text {
+    transform: rotate(90deg);
+    color: #8e8e8e;
+    position: relative;
+    bottom: 40px;
+    font-family: "San Francisco Pro Display";
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  &__icon {
+    position: relative;
+    bottom: 0;
+    animation: move 1.6s infinite ease-in-out;
+
+    @keyframes move {
+      0% {
+        bottom: 0;
+      }
+      50% {
+        bottom: 10px;
+      }
+      100% {
+        bottom: 0;
+      }
+    }
+  }
+}
+
+.start_project {
+  width: 280px;
+  height: 60px;
+
+  background-color: #fff;
+  border: 1px solid #222;
+
+  font-family: "San Francisco Pro Display";
+  font-weight: 500;
+  color: #222;
+  font-size: 17px;
+
+  transition: color ease-in 600ms, background-color ease-in 600ms;
+  &:hover {
+    color: #fff;
+    background-color: #222;
+
+    transition: color ease-in 600ms, background-color ease-in 600ms;
+  }
+}
+
+.watch_projects {
+  color: #8e8e8e;
+  font-size: 17px;
+  font-family: "San Francisco Pro Display";
+  font-weight: 400;
+
+  background-color: #fff;
+  border: none;
+
+  transition: color ease-in 600ms;
+
+  &:hover {
+    color: #222;
+
+    transition: color ease-in 600ms;
+  }
+}
+
+.more {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  width: 100%;
+  padding: 0;
+
+  background: none;
+  border: none;
+
+  font-family: "San Francisco Pro Display";
+  font-weight: 400;
+  font-size: 17px;
+
+  &__icon, &__icon-mob {
+    position: relative;
+
+    transition: right ease-out 0.6s;
+    right: 0;
+  }
+  &__icon-mob {
+    display: none;
+  }
+
+  &:hover {
+    .more__icon, .more__icon-mob {
+      transition: right ease-out 0.6s;
+      right: 20px;
+    }
+  }
+
+  @media screen and (max-device-width: 576px) {
+    font-size: 15px;
+
+    .more {
+      &__icon {
+        display: none;
+      }
+      &__icon-mob {
+        display: block;
+      }
+    }
+  }
+}

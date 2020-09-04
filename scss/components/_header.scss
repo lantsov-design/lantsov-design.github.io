@@ -1,0 +1,115 @@
+.header {
+    padding: 40px 0px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        z-index: 3;
+    }
+
+    &__menu {
+        @include flex_row;
+        justify-content: flex-end;
+        align-items: center;
+        &-item {
+            margin-left: 81px;
+
+            text-decoration: none;
+            font-size: setFontSize(desktop, menu);
+            font-weight: 400;
+
+            color: setColor(text, main);
+            transition: color ease-in 600ms;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:hover {
+                color: setColor(text, secondary);
+                transition: color ease-in 600ms;
+            }
+            &_active {
+                pointer-events: none;
+                color: setColor(text, secondary);
+            }
+        }
+    }
+}
+.mobile-menu {
+    display: none;
+}
+
+@media screen and (max-device-width : 1024px) {
+    .header {
+        &__menu-item {
+            margin-left: 60px;
+        }
+    }
+}
+
+@media screen and (max-device-width : 768px) {
+    .header {
+        &__menu-item {
+            margin-left: 50px;
+        }
+    }
+}
+
+@media screen and (max-device-width : 576px) {
+    body.lock {
+        overflow: hidden;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    .header {
+        padding: 20px 0px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 50;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+        }
+        &__menu {
+            display: block;
+            position: fixed;
+            top: -200%;
+            opacity: 0;
+            left: 0;
+            overflow: scroll;
+            width: 100%;
+            height: 100%;
+
+
+            background-color: #fff;
+            margin: auto 0;
+            padding: 110px 0px 0 0px;
+            transition: opacity ease-in 0.3s;
+            &-item {
+                display: block;
+                text-align: center;
+                margin: 0 0 40px 0;
+                font-weight: 300;
+                font-size: 20px;
+                text-transform: uppercase;
+            }
+        }
+        &__menu.active {
+            opacity: 1;
+            top: 0;
+        }
+    }
+}
+
