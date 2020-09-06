@@ -11,11 +11,11 @@ let project1 = "#",
    project2 = "#",
    project3 = "#";
 
-let behance = "#",
+let behance = "https://www.behance.net/lantsov_a",
    dribbble = "https://dribbble.com/lantsov_a",
    vk = "https://vk.com/lantsov_a",
-   telegram = "#",
-   linkedin = "#";
+   telegram = "https://t.me/lantsov_a",
+   linkedin = "https://www.linkedin.com/in/lantsova/";
 
 $(document).ready(function () {
    //Mobile menu
