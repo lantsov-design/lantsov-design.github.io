@@ -2,3 +2,4 @@
 *.sass.map
 *.scss.map
 *.DS_Store
+/dist
