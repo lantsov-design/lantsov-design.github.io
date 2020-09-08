@@ -1453,6 +1453,9 @@ body {
     width: 24px;
     height: 24px;
   }
+  .footer__title {
+    font-size: 16px;
+  }
   .footer-small {
     display: -webkit-box;
     display: -ms-flexbox;
