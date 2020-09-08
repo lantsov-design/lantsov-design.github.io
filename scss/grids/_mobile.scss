@@ -1,7 +1,11 @@
 /*------------------------------------------------------------------------------------------
-Call to action first screen - Grid
+Mobile grid
 ------------------------------------------------------------------------------------------*/
 @media screen and (max-device-width: 576px) {
+  .container {
+    padding: 0 20px;
+  }
+
   .cta {
     &__wrapper {
       align-items: center;

@@ -1,5 +1,9 @@
 /*------------------------------------------------------------------------------------------
-Call to action first screen - Grid
+Tablets grid
+------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------
+Main page
 ------------------------------------------------------------------------------------------*/
 @media screen and (max-device-width: 1040px) {
   .cta {
@@ -28,11 +32,6 @@ Call to action first screen - Grid
   }
 }
 
-
-
-/*------------------------------------------------------------------------------------------
-About me - Grid
-------------------------------------------------------------------------------------------*/
 @media screen and (max-device-width: 768px) {
   .about-me {
     &__wrapper {
@@ -44,9 +43,6 @@ About me - Grid
   }
 }
 
-/*------------------------------------------------------------------------------------------
-Services - Grid
-------------------------------------------------------------------------------------------*/
 @media screen and (max-device-width: 1040px) {
   .services {
     &__wrapper {
@@ -61,6 +57,31 @@ Services - Grid
       @include flex_column;
       column-gap: 0;
       row-gap: 0;
+    }
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+Contacts page
+------------------------------------------------------------------------------------------*/
+@media screen and (max-device-width: 1040px) {
+  .contacts-content {
+    &__wrapper {
+      @include flex_column;
+      gap: 0;
+      align-items: center;
+    }
+    &__info-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__social-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
     }
   }
 }

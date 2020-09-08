@@ -1474,20 +1474,17 @@ body {
   }
 }
 
+/*------------------------------------------------------------------------------------------
+Desktop grid
+------------------------------------------------------------------------------------------*/
 .container {
   margin: 0 auto;
   padding: 0 30px;
   max-width: 1140px;
 }
 
-@media screen and (max-device-width: 576px) {
-  .container {
-    padding: 0 20px;
-  }
-}
-
 /*------------------------------------------------------------------------------------------
-Call to action first screen - Grid
+Main page
 ------------------------------------------------------------------------------------------*/
 .cta__wrapper {
   display: -ms-grid;
@@ -1542,9 +1539,6 @@ Call to action first screen - Grid
       flex-wrap: wrap;
 }
 
-/*------------------------------------------------------------------------------------------
-About me - Grid
-------------------------------------------------------------------------------------------*/
 .about-me__wrapper {
   display: -ms-grid;
   display: grid;
@@ -1570,9 +1564,6 @@ About me - Grid
           align-items: flex-start;
 }
 
-/*------------------------------------------------------------------------------------------
-Projects - Grid
-------------------------------------------------------------------------------------------*/
 .projects__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1599,9 +1590,6 @@ Projects - Grid
           justify-content: space-between;
 }
 
-/*------------------------------------------------------------------------------------------
-Quote - Grid
-------------------------------------------------------------------------------------------*/
 .quote__quote-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1618,9 +1606,6 @@ Quote - Grid
           justify-content: center;
 }
 
-/*------------------------------------------------------------------------------------------
-Services - Grid
-------------------------------------------------------------------------------------------*/
 .services__wrapper {
   display: -ms-grid;
   display: grid;
@@ -1633,9 +1618,6 @@ Services - Grid
   row-gap: 100px;
 }
 
-/*------------------------------------------------------------------------------------------
-Stages - Grid
-------------------------------------------------------------------------------------------*/
 .stages__title-block {
   display: -ms-grid;
   display: grid;
@@ -1646,7 +1628,7 @@ Stages - Grid
 }
 
 /*------------------------------------------------------------------------------------------
-About - Grid (About page)
+About page
 ------------------------------------------------------------------------------------------*/
 .about__wrapper {
   display: -ms-grid;
@@ -1683,7 +1665,80 @@ About - Grid (About page)
 }
 
 /*------------------------------------------------------------------------------------------
-Call to action first screen - Grid
+Contacts page
+------------------------------------------------------------------------------------------*/
+.contact-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contacts-content__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr;
+      grid-template-columns: 1fr 2fr;
+  -webkit-column-gap: 40px;
+          column-gap: 40px;
+}
+
+.contacts-content__info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contacts-content__social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/*------------------------------------------------------------------------------------------
+Error page
+------------------------------------------------------------------------------------------*/
+.error__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*------------------------------------------------------------------------------------------
+Tablets grid
+------------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------------------
+Main page
 ------------------------------------------------------------------------------------------*/
 @media screen and (max-device-width: 1040px) {
   .cta__wrapper {
@@ -1745,9 +1800,6 @@ Call to action first screen - Grid
   }
 }
 
-/*------------------------------------------------------------------------------------------
-About me - Grid
-------------------------------------------------------------------------------------------*/
 @media screen and (max-device-width: 768px) {
   .about-me__wrapper {
     display: -webkit-box;
@@ -1767,9 +1819,6 @@ About me - Grid
   }
 }
 
-/*------------------------------------------------------------------------------------------
-Services - Grid
-------------------------------------------------------------------------------------------*/
 @media screen and (max-device-width: 1040px) {
   .services__wrapper {
     display: -ms-grid;
@@ -1800,9 +1849,60 @@ Services - Grid
 }
 
 /*------------------------------------------------------------------------------------------
-Call to action first screen - Grid
+Contacts page
+------------------------------------------------------------------------------------------*/
+@media screen and (max-device-width: 1040px) {
+  .contacts-content__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacts-content__info-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacts-content__social-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+/*------------------------------------------------------------------------------------------
+Mobile grid
 ------------------------------------------------------------------------------------------*/
 @media screen and (max-device-width: 576px) {
+  .container {
+    padding: 0 20px;
+  }
   .cta__wrapper {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -2414,52 +2514,7 @@ About - Style (About page)
 }
 
 .contact-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   height: 100vh;
-}
-
-.contacts-content__wrapper {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 2fr;
-      grid-template-columns: 1fr 2fr;
-  -webkit-column-gap: 40px;
-          column-gap: 40px;
-}
-
-.contacts-content__info-block {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.contacts-content__social-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .contacts-content__cta {
@@ -2507,48 +2562,6 @@ About - Style (About page)
 }
 
 @media screen and (max-device-width: 1040px) {
-  .contacts-content__wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 0;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .contacts-content__info-block {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .contacts-content__social-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
   .contacts-content__cta {
     text-align: center;
     margin-bottom: 100px;
@@ -2600,22 +2613,6 @@ About - Style (About page)
     font-size: 16px;
     text-align: center;
   }
-}
-
-.error__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .error__message, .error__link {

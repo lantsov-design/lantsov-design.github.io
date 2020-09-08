@@ -1,9 +1,4 @@
 .error {
-  &__wrapper {
-    @include flex_column;
-    justify-content: center;
-    align-items: center;
-  }
   &__message, &__link {
     font-style: normal;
     font-weight: 400;

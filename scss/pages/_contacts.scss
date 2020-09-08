@@ -1,24 +1,7 @@
 .contact-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   height: 100vh;
 }
 .contacts-content {
-  &__wrapper {
-    @include grid_row_1_2;
-  }
-  &__info-block {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  &__social-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
   &__cta {
     font-style: normal;
     font-weight: 500;
@@ -66,24 +49,6 @@
 
 @media screen and (max-device-width: 1040px) {
   .contacts-content {
-    &__wrapper {
-      @include flex_column;
-      gap: 0;
-      align-items: center;
-    }
-    &__info-block {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    &__social-links {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
     &__cta {
       text-align: center;
       margin-bottom: 100px;
@@ -99,7 +64,6 @@
 }
 @media screen and (max-device-width: 768px) {
   .contacts-content {
-
     &__cta {
       max-width: 280px;
       font-size: 20px;
