@@ -48,19 +48,19 @@
 }
 
 @media screen and (max-device-width: 1040px) {
-  .contacts-content {
-    &__cta {
-      text-align: center;
-      margin-bottom: 100px;
+    .contacts-content {
+      &__cta {
+        text-align: center;
+        margin-bottom: 100px;
+      }
+      &__mail-link {
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      &__social-link {
+        padding: 20px;
+      }
     }
-    &__mail-link {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    &__social-link {
-      padding: 20px;
-    }
-  }
 }
 @media screen and (max-device-width: 768px) {
   .contacts-content {

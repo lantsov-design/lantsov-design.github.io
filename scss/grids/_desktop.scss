@@ -101,11 +101,6 @@ About page
 /*------------------------------------------------------------------------------------------
 Contacts page
 ------------------------------------------------------------------------------------------*/
-.contact-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
 .contacts-content {
   &__wrapper {
     @include grid_row_1_2;
@@ -120,6 +115,11 @@ Contacts page
     flex-direction: row;
     justify-content: space-between;
   }
+}
+.contact-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /*------------------------------------------------------------------------------------------
