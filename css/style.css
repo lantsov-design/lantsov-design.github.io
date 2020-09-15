@@ -1713,9 +1713,10 @@ Contacts page
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 100vh;
 }
 
 /*------------------------------------------------------------------------------------------
@@ -2518,6 +2519,10 @@ About - Style (About page)
 
 .contact-body {
   height: 100vh;
+}
+
+.contacts-content {
+  margin: auto 0;
 }
 
 .contacts-content__cta {
