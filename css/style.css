@@ -2622,6 +2622,10 @@ About - Style (About page)
   }
 }
 
+.error {
+  margin: auto 0;
+}
+
 .error__message, .error__link {
   font-style: normal;
   font-weight: 400;
