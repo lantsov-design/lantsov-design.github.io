@@ -10,7 +10,7 @@ let contactPage = "../pages/contacts.html",
     aboutPage = "../pages/about.html",
     writeMe = "mailto:lancov.alex.2@gmail.com";
 
-let project1 = "https://www.behance.net/gallery/104416027/Lantsov-Design",
+let project1 = "#",
     project2 = "#",
     project3 = "#";
 
