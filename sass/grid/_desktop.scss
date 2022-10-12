@@ -1,0 +1,146 @@
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+@media screen and (max-device-width: 576px) {
+
+  .container {
+    padding: 0 20px;
+  }
+}
+
+.grid_2_1 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+
+  grid-column-gap: 40px;
+}
+
+.grid_1_2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  //grid-column-gap: 40px;
+}
+
+.grid_1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  grid-column-gap: 40px;
+}
+
+.grid_1_1ng {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.cta {
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-scroll {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &-wrapper-block-left-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.serviceList {
+  display: flex;
+  flex-direction: column;
+
+  &-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-item {
+    &-title {
+      display: grid;
+      grid-template-columns: 3fr 1fr 1.6fr 15px;
+      justify-content: space-between;
+      align-items: center;
+
+      grid-column-gap: 40px;
+    }
+  }
+}
+
+.serviceList-item-title-sum {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1.6fr 15px;
+  justify-content: space-between;
+  align-items: center;
+
+  grid-column-gap: 40px;
+}
+
+
+.footer {
+  &-wrapper {
+    display: grid;
+    grid-template-columns: 1.79fr 1fr;
+    grid-column-gap: 0px;
+  }
+  &-leftBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &-up {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+  &-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+    gap: 60px;
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      &-2 {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+      }
+
+      &-2items {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  &-watchProject {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

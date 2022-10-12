@@ -1,0 +1,174 @@
+/*
+Example
+
+@mixin flex_row {
+    display: flex;
+    flex-direction: row;
+}
+*/
+
+@mixin menu-text-light {
+    font-size: setFontSize(desktop, menu);
+    color: setColor(light,secondary);
+    text-decoration: none;
+}
+
+@mixin h2-light {
+    font-size: setFontSize(desktop, h2);
+    font-weight: 500;
+    color: setColor(light,primary);
+    text-decoration: none;
+
+    line-height: 34px;
+
+    @media screen and (max-device-width: 576px) {
+        font-size: setFontSize(mobile, h2);
+        line-height: 28px;
+    }
+}
+
+@mixin h3-light {
+    font-size: setFontSize(desktop, h3);
+    font-weight: 500;
+    color: setColor(light,primary);
+    text-decoration: none;
+
+    line-height: 22px;
+
+    @media screen and (max-device-width: 576px) {
+        font-size: setFontSize(mobile, h3);
+        line-height: 16px;
+    }
+}
+
+@mixin text-light {
+    font-size: setFontSize(desktop, text);
+    color: setColor(light,secondary);
+    font-style: normal;
+    text-decoration: none;
+
+    line-height: 24px;
+
+    @media screen and (max-device-width: 576px) {
+        font-size: setFontSize(mobile, text);
+        line-height: 18px;
+    }
+}
+
+@mixin small-text-light {
+    font-size: setFontSize(desktop, small-text);
+    color: setColor(light,primary);
+    font-style: normal;
+    text-decoration: none;
+
+    line-height: 21px;
+
+    @media screen and (max-device-width: 576px) {
+        font-size: setFontSize(mobile, small-text);
+        line-height: 18px;
+    }
+}
+
+@mixin caption-text-light {
+    font-size: setFontSize(desktop, caption);
+    color: setColor(light,secondary-gray);
+    font-style: italic;
+    text-decoration: none;
+
+    @media screen and (max-device-width: 576px) {
+        font-size: setFontSize(mobile, caption);
+    }
+}
+
+@mixin decorate-text-light {
+    font-family: "Glendale";
+    font-size: 12px;
+    color: setColor(light,borders);
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+}
+
+
+// DARK MODE
+@mixin menu-text-dark {
+    font-size: setFontSize(desktop, menu);
+    color: setColor(dark,secondary);
+    text-decoration: none;
+}
+
+@mixin h2-dark {
+    font-size: setFontSize(desktop, h2);
+    font-weight: 500;
+    color: setColor(dark,primary);
+    text-decoration: none;
+
+    line-height: 34px;
+
+    @media screen and (max-device-width: 576px) {
+        font-size: setFontSize(mobile, h2);
+        line-height: 28px;
+    }
+}
+
+@mixin h3-dark {
+    font-size: setFontSize(desktop, h3);
+    font-weight: 500;
+    color: setColor(dark,primary);
+    text-decoration: none;
+
+    line-height: 22px;
+
+    @media screen and (max-device-width: 576px) {
+        font-size: setFontSize(mobile, h3);
+        line-height: 16px;
+    }
+}
+
+@mixin text-dark {
+    font-size: setFontSize(desktop, text);
+    color: setColor(dark,primary);
+    font-style: normal;
+    text-decoration: none;
+
+    line-height: 24px;
+
+    @media screen and (max-device-width: 576px) {
+        font-size: setFontSize(mobile, text);
+        line-height: 18px;
+    }
+}
+
+@mixin small-text-dark {
+    font-size: setFontSize(desktop, small-text);
+    color: setColor(dark,primary);
+    font-style: normal;
+    text-decoration: none;
+
+    line-height: 21px;
+
+    @media screen and (max-device-width: 576px) {
+        font-size: setFontSize(mobile, small-text);
+        line-height: 18px;
+    }
+}
+
+@mixin caption-text-dark {
+    font-size: setFontSize(desktop, caption);
+    color: setColor(dark,secondary-gray);
+    font-style: italic;
+    text-decoration: none;
+
+    @media screen and (max-device-width: 576px) {
+        font-size: setFontSize(mobile, caption);
+    }
+}
+
+@mixin decorate-text-dark {
+    font-family: "Glendale";
+    font-size: 12px;
+    color: setColor(dark,borders);
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+}

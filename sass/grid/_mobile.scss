@@ -1,0 +1,27 @@
+@media screen and (max-device-width: 576px) {
+  .serviceList {
+    &-item {
+      &-title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .serviceList-item-title-sum {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer {
+    &-wrapper {
+      display: block;
+    }
+
+    &-menu {
+      gap: 30px;
+    }
+  }
+}

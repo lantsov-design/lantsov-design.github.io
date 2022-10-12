@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="26px" viewBox="0 0 27 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Show icon</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop/Main-page" transform="translate(-1264.000000, -745.000000)" fill="#201E1E" stroke="#201E1E">
+            <g id="Services" transform="translate(0.000000, 660.500000)">
+                <g id="Services-list" transform="translate(490.000000, 80.500000)">
+                    <g id="Show-icon" transform="translate(774.000000, 4.000000)">
+                        <rect id="Rectangle" x="12.9615385" y="0.5" width="1.07692308" height="25"></rect>
+                        <path d="M14,0 L14,26 L13,26 L13,-0 L14,0 Z" id="Rectangle" transform="translate(13.500000, 13.000000) rotate(90.000000) translate(-13.500000, -13.000000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

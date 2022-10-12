@@ -1,0 +1,9 @@
+// Set color for element use: setColor(ui, accent)
+@function setColor($type, $item) {
+    @return map-get(map-get($colors, $type), $item);
+}
+
+// Set color for element use: setFontSize(text, menu)
+@function setFontSize($device, $item) {
+    @return map-get(map-get($fonts, $device), $item);
+}

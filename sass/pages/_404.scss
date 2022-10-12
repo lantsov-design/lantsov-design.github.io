@@ -1,0 +1,50 @@
+.error {
+  &-wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &-illustration {
+      width: 100%;
+    }
+
+    &-text {
+      margin-top: 40px;
+      color: setColor(light, primary);
+      text-align: center;
+    }
+    &-link {
+      color: setColor(light, primary);
+      border-bottom: setColor(light, primary) solid 1px;
+    }
+  }
+}
+
+@media screen and (max-device-width: 880px) {
+  .error {
+    &-wrapper {  
+      &-illustration {
+        width: 100%;
+        height: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (max-device-width: 578px) {
+  .error {
+    &-wrapper {  
+      &-illustration {
+        width: 100%;
+        height: 73px;
+      }
+  
+      &-text {
+        margin-top: 20px;
+        line-height: 22px;
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="14px" viewBox="0 0 15 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Show-icon small</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop/Main-page" transform="translate(-1274.000000, -1033.000000)" fill="#201E1E">
+            <g id="Services" transform="translate(0.000000, 660.500000)">
+                <g id="Services-list" transform="translate(490.000000, 80.500000)">
+                    <g id="Element-2-(Opened)" transform="translate(0.000000, 74.131414)">
+                        <g id="Process-list" transform="translate(0.000000, 193.868586)">
+                            <g id="Show-icon-small" transform="translate(784.000000, 24.000000)">
+                                <polygon id="Rectangle" transform="translate(7.500000, 7.000000) rotate(90.000000) translate(-7.500000, -7.000000) " points="7 -0.5 8 -0.5 8 14.5 7 14.5"></polygon>
+                                <rect id="Rectangle" x="6.96428571" y="0" width="1.07142857" height="14"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

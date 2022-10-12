@@ -1,0 +1,120 @@
+.more-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  background: none;
+  border: none;
+}
+
+.startProjectButton {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 180px;
+  height: 40px;
+
+  border: none;
+  background: none;
+
+  font-family: 'Montserrat';
+
+  @include small-text-light;
+
+  @media screen and (max-device-width: 576px) {
+    width: 160px;
+  }
+
+  &-img {
+    position: relative;
+    right: 0px;
+    stroke: setColor(light, primary);
+    fill: none;
+    
+    @media screen and (max-device-width: 576px) {
+      height: 10px;
+    }
+
+    transition: right ease-out 0.5s;
+  }
+
+  &:hover {
+    .startProjectButton-img {
+      position: relative;
+      right: 20px;
+
+      transition: right ease-in 0.5;
+
+      @media screen and (max-device-width: 576px) {
+        right: 10px;
+      }
+    }
+  }
+}
+
+.startProjectButton-dark {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 180px;
+  height: 40px;
+
+  border: none;
+  background: none;
+  font-family: 'Montserrat';
+
+  @include small-text-dark;
+  color: setColor(dark, primary);
+
+  @media screen and (max-device-width: 576px) {
+    width: 140px;
+  }
+
+  .startProjectButton-img {
+    position: relative;
+    right: 0px;
+    stroke: setColor(dark, primary);
+    fill: none;
+    
+
+    @media screen and (max-device-width: 576px) {
+      height: 10px;
+    }
+
+    transition: right ease-out 0.5s;
+  }
+
+  &:hover {
+    .startProjectButton-img {
+      position: relative;
+      right: 20px;
+
+      transition: right ease-in 0.5;
+
+      @media screen and (max-device-width: 576px) {
+        right: 10px;
+      }
+    }
+  }
+}
+
+.close-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  background: none;
+  border: none;
+}

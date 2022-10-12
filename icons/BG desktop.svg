@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1402px" height="662px" viewBox="0 0 1402 662" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 6</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Group-6" transform="translate(1.000000, 1.000000)">
+            <line x1="890" y1="5.01236797e-19" x2="890.5" y2="660.5" id="Line" stroke="#EEEEEE"></line>
+            <line x1="90" y1="5.01236797e-19" x2="90" y2="660" id="Line-Copy-2" stroke="#EEEEEE"></line>
+            <line x1="1310" y1="5.01236797e-19" x2="1310" y2="660" id="Line-Copy" stroke="#EEEEEE"></line>
+            <line x1="2.08333617e-17" y1="168.5" x2="1400" y2="168.5" id="Line-2" stroke="#EEEEEE"></line>
+            <line x1="2.08333617e-17" y1="429.5" x2="1400" y2="429.5" id="Line-2" stroke="#EEEEEE"></line>
+            <line x1="2.08333617e-17" y1="491.5" x2="1400" y2="491.5" id="Line-2-Copy" stroke="#EEEEEE"></line>
+            <g id="Markers" transform="translate(85.000000, 163.000000)" stroke="#201E1E">
+                <g id="Marker" transform="translate(800.000000, 0.000000)">
+                    <line x1="5" y1="-1.27683358e-14" x2="5" y2="10" id="Line-3"></line>
+                    <line x1="5" y1="-1.27683358e-14" x2="5" y2="10" id="Line-3" transform="translate(5.000000, 5.000000) rotate(90.000000) translate(-5.000000, -5.000000) "></line>
+                </g>
+                <g id="Marker-Copy-4" transform="translate(1220.000000, 0.000000)">
+                    <line x1="5" y1="-1.27683358e-14" x2="5" y2="10" id="Line-3"></line>
+                    <line x1="5" y1="-1.27683358e-14" x2="5" y2="10" id="Line-3" transform="translate(5.000000, 5.000000) rotate(90.000000) translate(-5.000000, -5.000000) "></line>
+                </g>
+                <g id="Marker-Copy">
+                    <line x1="5" y1="-1.27683358e-14" x2="5" y2="10" id="Line-3"></line>
+                    <line x1="5" y1="-1.27683358e-14" x2="5" y2="10" id="Line-3" transform="translate(5.000000, 5.000000) rotate(90.000000) translate(-5.000000, -5.000000) "></line>
+                </g>
+                <g id="Marker-Copy-2" transform="translate(0.000000, 261.000000)">
+                    <line x1="5" y1="-1.27683358e-14" x2="5" y2="10" id="Line-3"></line>
+                    <line x1="5" y1="-1.27683358e-14" x2="5" y2="10" id="Line-3" transform="translate(5.000000, 5.000000) rotate(90.000000) translate(-5.000000, -5.000000) "></line>
+                </g>
+                <g id="Marker-Copy-3" transform="translate(800.000000, 261.000000)">
+                    <line x1="5" y1="-1.27683358e-14" x2="5" y2="10" id="Line-3"></line>
+                    <line x1="5" y1="-1.27683358e-14" x2="5" y2="10" id="Line-3" transform="translate(5.000000, 5.000000) rotate(90.000000) translate(-5.000000, -5.000000) "></line>
+                </g>
+                <g id="Marker-Copy-5" transform="translate(1220.000000, 261.000000)">
+                    <line x1="5" y1="-1.27683358e-14" x2="5" y2="10" id="Line-3"></line>
+                    <line x1="5" y1="-1.27683358e-14" x2="5" y2="10" id="Line-3" transform="translate(5.000000, 5.000000) rotate(90.000000) translate(-5.000000, -5.000000) "></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

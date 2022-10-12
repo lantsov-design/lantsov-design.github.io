@@ -1,0 +1,142 @@
+.contactsPage {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &-wrapper {
+    align-items: center;
+    gap: 60px;
+  }
+  &-h3 {
+    margin-left: 90px;
+    line-height: 28px;
+    &-span {
+      border-bottom: setColor(light, primary) solid 1px;
+    }
+  }
+
+  &-rightBlock {
+    display: flex;
+    flex-direction: column;
+    &-h3 {
+      margin-bottom: 21px;
+    }
+    &-linksList {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      &-link {
+        color: setColor(light, secondary);
+        margin-right: 60px;
+        transition: color ease-out 0.4s;
+        &:last-child {
+          margin-right: 0;
+        }
+        &:hover {
+          color: setColor(light, primary);
+          transition: color ease-in 0.4s;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+
+@media screen and (max-device-width: 1000px)  {
+  .contactsPage {
+    &-h3 {
+      margin-left: 30px;
+    }
+    &-rightBlock {
+      &-linksList {
+        &-link {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-device-width: 878px)  {
+  .contactsPage {
+    align-items: center;
+    &-wrapper {
+      align-items: center;
+    }
+    &-h3 {
+      margin-left: 0;
+      text-align: center;
+    }
+    &-rightBlock {
+      align-items: center;
+      &-linksList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-link {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-device-height: 414px) and (orientation: landscape),
+  (max-device-height: 828px) and (orientation: landscape) and (min-resolution: 2dppx) {
+    .contactsPage {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    
+      &-wrapper {
+        align-items: center;
+        margin: 0 auto;
+      }
+      &-h3 {
+        margin-left: 0;
+      }
+    
+      &-rightBlock {
+        display: flex;
+        flex-direction: column;
+        &-h3 {
+          margin-bottom: 21px;
+        }
+        &-linksList {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          flex-wrap: wrap;
+          &-link {
+            margin-right: 40px;
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+    
+      }
+    
+    }
+}
+
+
+@media screen and (max-device-width: 568px) {
+  .contactsPage {
+    &-h3 {
+      line-height: 18px;
+    }
+    &-wrapper {
+      gap: 40px;
+    }
+  }
+}
+
+
