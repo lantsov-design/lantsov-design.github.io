@@ -2770,7 +2770,7 @@ DARK MODE
      object-fit: cover;
   width: 220px;
   height: 341px;
-  background: url("") center no-repeat;
+  background: url("../images/projectspage/Helloween.png") center no-repeat;
   background-size: 100%;
   -webkit-transition: background-size ease 0.5s;
   transition: background-size ease 0.5s;
