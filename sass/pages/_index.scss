@@ -399,10 +399,18 @@ Projects Screen
 
   transform: scale(1);
   transition: transform ease 0.5s;
+  @media screen and (max-device-width: 880px) {
+    transform: none;
+    transition: none;
+  }
 
   &:hover {
     transform: scale(0.95);
     transition: transform ease 0.5s;
+    @media screen and (max-device-width: 880px) {
+      transform: none;
+      transition: none;
+    }
   }
 
   &-responsive {

@@ -1093,6 +1093,7 @@ Components
           justify-content: space-between;
   width: 180px;
   height: 40px;
+  padding: 0;
   border: none;
   background: none;
   font-family: 'Montserrat';
@@ -1690,6 +1691,15 @@ Projects Screen
   transition: transform ease 0.5s, -webkit-transform ease 0.5s;
 }
 
+@media screen and (max-device-width: 880px) {
+  .projectCard {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
 .projectCard:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
@@ -1697,6 +1707,15 @@ Projects Screen
   transition: -webkit-transform ease 0.5s;
   transition: transform ease 0.5s;
   transition: transform ease 0.5s, -webkit-transform ease 0.5s;
+}
+
+@media screen and (max-device-width: 880px) {
+  .projectCard:hover {
+    -webkit-transform: none;
+            transform: none;
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 
 .projectCard-responsive {
@@ -2765,6 +2784,20 @@ DARK MODE
   transition: background-size ease 0.5s;
 }
 
+@media handheld and (max-device-width: 880px) {
+  .projectsPage-projectCard-img-18:hover {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media handheld and (max-device-width: 880px) {
+  .projectsPage-projectCard-img-18 {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
 .projectsPage-projectCard-img-19 {
   -o-object-fit: cover;
      object-fit: cover;
@@ -2780,6 +2813,20 @@ DARK MODE
   background-size: 120%;
   -webkit-transition: background-size ease 0.5s;
   transition: background-size ease 0.5s;
+}
+
+@media handheld and (max-device-width: 880px) {
+  .projectsPage-projectCard-img-19:hover {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media handheld and (max-device-width: 880px) {
+  .projectsPage-projectCard-img-19 {
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 
 .projectsPage-projectCard-img-20 {
@@ -2798,6 +2845,20 @@ DARK MODE
   background-size: 120%;
   -webkit-transition: background-size ease 0.5s;
   transition: background-size ease 0.5s;
+}
+
+@media handheld and (max-device-width: 880px) {
+  .projectsPage-projectCard-img-20:hover {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+
+@media handheld and (max-device-width: 880px) {
+  .projectsPage-projectCard-img-20 {
+    -webkit-transition: none;
+    transition: none;
+  }
 }
 
 .projectsPage-projectCard-wrapper {

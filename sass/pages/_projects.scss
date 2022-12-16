@@ -330,6 +330,12 @@
         &:hover {
           background-size: 120%;
           transition: background-size ease 0.5s;
+          @media handheld and (max-device-width: 880px) {
+            transition: none;
+          }
+        }
+        @media handheld and (max-device-width: 880px) {
+          transition: none;
         }
       }
       &-19 {
@@ -344,6 +350,12 @@
         &:hover {
           background-size: 120%;
           transition: background-size ease 0.5s;
+          @media handheld and (max-device-width: 880px) {
+            transition: none;
+          }
+        }
+        @media handheld and (max-device-width: 880px) {
+          transition: none;
         }
       }
       &-20 {
@@ -359,6 +371,12 @@
         &:hover {
           background-size: 120%;
           transition: background-size ease 0.5s;
+          @media handheld and (max-device-width: 880px) {
+            transition: none;
+          }
+        }
+        @media handheld and (max-device-width: 880px) {
+          transition: none;
         }
       }
     }
