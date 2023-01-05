@@ -597,7 +597,7 @@ Footer
 }
 
 .bigMenu {
-  visibility: visible;
+  visibility: hidden;
   display: block;
   height: 100vh;
   width: 100%;
@@ -608,7 +608,7 @@ Footer
   top: 0;
   left: 0;
 
-  opacity: 1;
+  opacity: 0;
 
   background-color: rgba(0, 0, 0, 0.94);
 
@@ -874,8 +874,8 @@ Footer
   overflow: hidden;
 }
 .hide-block {
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
   transition: all ease 0.5s;
 }
 .menu-active-bar {
