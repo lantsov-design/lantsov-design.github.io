@@ -153,7 +153,7 @@
     justify-content: flex-end;
 
     &-dark {
-      display: none;
+      display: flex;
       cursor: pointer;
       margin-right: 30px;
 
@@ -172,12 +172,5 @@
       @include text-light;
       color: setColor(light, bg);
     }
-  }
-}
-
-.bottomBar-dark {
-  @media screen and (max-device-width: 880px) {
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(8px);
   }
 }
