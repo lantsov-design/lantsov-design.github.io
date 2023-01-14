@@ -2,7 +2,6 @@
 
 
 //More button
-
 const moreButton = document.getElementById("moreButton");
 moreButton.addEventListener("click", function () {
   document.querySelector(".bigMenu").classList.toggle("hide-block");
@@ -20,7 +19,7 @@ moreButton.addEventListener("click", function () {
     .classList.toggle("white-icons");
   document
     .querySelector(".bottomBar-rightbar-language")
-    .classList.toggle("white-color");
+    .classList.toggle("primary-dark");
 });
 
 //Close button
@@ -41,10 +40,14 @@ closeMenuButton.addEventListener("click", function () {
     .classList.toggle("white-icons");
   document
     .querySelector(".bottomBar-rightbar-language")
-    .classList.toggle("white-color");
+    .classList.toggle("primary-dark");
 });
 
 
+
+
+
+//HEADER SCROLL FOR MOBILE
 let pageScrollPosition = pageYOffset,
 isMobile = false;
 const headerBG = document.querySelector('.header');

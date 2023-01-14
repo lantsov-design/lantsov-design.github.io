@@ -1,0 +1,39 @@
+/*--------------------------------------------------------------------------------------------------
+LIGHT MODE
+--------------------------------------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------------------------------------------
+DARK MODE
+--------------------------------------------------------------------------------------------------*/
+
+//TYPOGRAPHY
+.menu-text-dark {
+  color: setColor(dark, secondary);
+
+  &:hover {
+    color: setColor(dark, primary);
+  }
+}
+.primary-dark {
+  color: setColor(dark, primary);
+}
+
+//BOTTOM BAR
+.bottomBar-light {
+  @media screen and (max-device-width: 880px) {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+  }
+}
+.bottomBar-dark {
+  @media screen and (max-device-width: 880px) {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+  }
+}
+
+
+.white-icons {
+  fill: setColor(dark, primary);
+}

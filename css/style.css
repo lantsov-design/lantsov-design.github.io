@@ -1014,7 +1014,9 @@ Components
 }
 
 .bottomBar-rightbar-dark {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   cursor: pointer;
   margin-right: 30px;
   -webkit-transition: fill ease 0.4s;
@@ -1046,6 +1048,14 @@ Components
   .bottomBar-rightbar-language {
     font-size: 12px;
     line-height: 18px;
+  }
+}
+
+@media screen and (max-device-width: 880px) {
+  .bottomBar-light {
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
   }
 }
 
@@ -1231,6 +1241,44 @@ Components
   height: 30px;
   background: none;
   border: none;
+}
+
+/*--------------------------------------------------------------------------------------------------
+LIGHT MODE
+--------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------
+DARK MODE
+--------------------------------------------------------------------------------------------------*/
+.menu-text-dark {
+  color: #6D6D6D;
+}
+
+.menu-text-dark:hover {
+  color: #FFFFFF;
+}
+
+.primary-dark {
+  color: #FFFFFF;
+}
+
+@media screen and (max-device-width: 880px) {
+  .bottomBar-light {
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+  }
+}
+
+@media screen and (max-device-width: 880px) {
+  .bottomBar-dark {
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-backdrop-filter: blur(8px);
+            backdrop-filter: blur(8px);
+  }
+}
+
+.white-icons {
+  fill: #FFFFFF;
 }
 
 /* ------------------------------------------------------------------------------------------
@@ -2243,10 +2291,6 @@ Footer
   }
 }
 
-.white-icons {
-  fill: #FFFFFF;
-}
-
 .hide-scroll {
   overflow: hidden;
 }
@@ -2266,105 +2310,6 @@ Footer
 
 .bottomBarZ {
   z-index: 20;
-}
-
-.white-color {
-  color: #FFFFFF;
-}
-
-/*--------------------------------------------------------------------------------------------------
-DARK MODE
---------------------------------------------------------------------------------------------------*/
-.menu-text-dark {
-  font-size: 12px;
-  color: #6D6D6D;
-  text-decoration: none;
-}
-
-.menu-text-dark:hover {
-  color: #FFFFFF;
-}
-
-.h2-dark {
-  font-size: 24px;
-  font-weight: 500;
-  color: #FFFFFF;
-  text-decoration: none;
-  line-height: 34px;
-}
-
-@media screen and (max-device-width: 576px) {
-  .h2-dark {
-    font-size: 18px;
-    line-height: 28px;
-  }
-}
-
-.h3-dark {
-  font-size: 18px;
-  font-weight: 500;
-  color: #FFFFFF;
-  text-decoration: none;
-  line-height: 22px;
-}
-
-@media screen and (max-device-width: 576px) {
-  .h3-dark {
-    font-size: 12px;
-    line-height: 16px;
-  }
-}
-
-.text-dark {
-  font-size: 16px;
-  color: #FFFFFF;
-  font-style: normal;
-  text-decoration: none;
-  line-height: 24px;
-}
-
-@media screen and (max-device-width: 576px) {
-  .text-dark {
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
-
-.text-small-dark {
-  font-size: 14px;
-  color: #FFFFFF;
-  font-style: normal;
-  text-decoration: none;
-  line-height: 21px;
-}
-
-@media screen and (max-device-width: 576px) {
-  .text-small-dark {
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
-
-.caption-dark {
-  font-size: 12px;
-  color: #444444;
-  font-style: italic;
-  text-decoration: none;
-}
-
-@media screen and (max-device-width: 576px) {
-  .caption-dark {
-    font-size: 10px;
-  }
-}
-
-.decorate-text-dark {
-  font-family: "Glendale";
-  font-size: 12px;
-  color: #212121;
-  font-weight: 300;
-  font-style: normal;
-  text-decoration: none;
 }
 
 .projectsPageBody {

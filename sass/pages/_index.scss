@@ -867,9 +867,6 @@ Footer
   }
 }
 
-.white-icons {
-  fill: setColor(dark, primary);
-}
 .hide-scroll {
   overflow: hidden;
 }
@@ -886,37 +883,4 @@ Footer
 
 .bottomBarZ {
   z-index: 20;
-}
-
-.white-color {
-  color: setColor(dark, primary);
-}
-
-/*--------------------------------------------------------------------------------------------------
-DARK MODE
---------------------------------------------------------------------------------------------------*/
-.menu-text-dark {
-  @include menu-text-dark;
-
-  &:hover {
-    color: setColor(dark, primary);
-  }
-}
-.h2-dark {
-  @include h2-dark;
-}
-.h3-dark {
-  @include h3-dark;
-}
-.text-dark {
-  @include text-dark;
-}
-.text-small-dark {
-  @include small-text-dark;
-}
-.caption-dark {
-  @include caption-text-dark;
-}
-.decorate-text-dark {
-  @include decorate-text-dark;
 }
