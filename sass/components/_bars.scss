@@ -97,6 +97,15 @@
   padding: 10px 20px;
   transition: all ease 0.4s;
 }
+.header-bg-dark {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  border-bottom: setColor(dark, borders) solid 1px;
+  
+  padding: 10px 20px;
+  transition: all ease 0.4s;
+}
 
 .bottomBar {
   display: flex;
@@ -170,7 +179,12 @@
     }
     &-language {
       @include text-light;
-      color: setColor(light, bg);
+      color: setColor(light, primary);
+      transition: color ease 0.4s;
+      &:hover {
+        color: setColor(light, secondary);
+        transition: color ease 0.4s;
+      }
     }
   }
 }

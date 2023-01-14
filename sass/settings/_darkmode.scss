@@ -1,13 +1,41 @@
 /*--------------------------------------------------------------------------------------------------
 LIGHT MODE
 --------------------------------------------------------------------------------------------------*/
-
+.primary-light {
+  color: setColor(light, primary);
+}
+.bottomBar-light {
+  @media screen and (max-device-width: 880px) {
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+  }
+}
 
 /*--------------------------------------------------------------------------------------------------
 DARK MODE
 --------------------------------------------------------------------------------------------------*/
 
-//TYPOGRAPHY
+//COLORS
+.primary-dark {
+  color: setColor(dark, primary);
+}
+.secondary-dark {
+  color: setColor(dark, secondary);
+}
+.secondary-gray-dark {
+  color: setColor(dark, secondary-gray);
+}
+.borders-dark {
+  color: setColor(dark, borders);
+}
+.bg-dark {
+  color: setColor(dark, bg);
+}
+.bg-body-dark {
+  background-color: setColor(dark, bg-body);
+}
+
+//TEXT AND ELEMENTS WITH HOVER
 .menu-text-dark {
   color: setColor(dark, secondary);
 
@@ -15,25 +43,29 @@ DARK MODE
     color: setColor(dark, primary);
   }
 }
-.primary-dark {
+.primary-vshover-dark {
   color: setColor(dark, primary);
+  &:hover {
+    color: setColor(dark, secondary);
+  }
+}
+
+.primary-icons-dark {
+  fill: setColor(dark, primary);
+
+  &:hover {
+    fill: setColor(dark, secondary);
+  }
+}
+
+.primary-fill-dark {
+  fill: setColor(dark, primary);
 }
 
 //BOTTOM BAR
-.bottomBar-light {
-  @media screen and (max-device-width: 880px) {
-    background-color: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(8px);
-  }
-}
 .bottomBar-dark {
   @media screen and (max-device-width: 880px) {
     background-color: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(8px);
   }
-}
-
-
-.white-icons {
-  fill: setColor(dark, primary);
 }

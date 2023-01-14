@@ -923,6 +923,17 @@ Components
   transition: all ease 0.4s;
 }
 
+.header-bg-dark {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-bottom: #212121 solid 1px;
+  padding: 10px 20px;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
 .bottomBar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1041,7 +1052,9 @@ Components
   font-style: normal;
   text-decoration: none;
   line-height: 24px;
-  color: #000;
+  color: #201E1E;
+  -webkit-transition: color ease 0.4s;
+  transition: color ease 0.4s;
 }
 
 @media screen and (max-device-width: 576px) {
@@ -1051,20 +1064,10 @@ Components
   }
 }
 
-@media screen and (max-device-width: 880px) {
-  .bottomBar-light {
-    background-color: rgba(255, 255, 255, 0.4);
-    -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-  }
-}
-
-@media screen and (max-device-width: 880px) {
-  .bottomBar-dark {
-    background-color: rgba(0, 0, 0, 0.4);
-    -webkit-backdrop-filter: blur(8px);
-            backdrop-filter: blur(8px);
-  }
+.bottomBar-rightbar-language:hover {
+  color: #A0A0A0;
+  -webkit-transition: color ease 0.4s;
+  transition: color ease 0.4s;
 }
 
 .more-button {
@@ -1246,19 +1249,8 @@ Components
 /*--------------------------------------------------------------------------------------------------
 LIGHT MODE
 --------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------------------------------------------
-DARK MODE
---------------------------------------------------------------------------------------------------*/
-.menu-text-dark {
-  color: #6D6D6D;
-}
-
-.menu-text-dark:hover {
-  color: #FFFFFF;
-}
-
-.primary-dark {
-  color: #FFFFFF;
+.primary-light {
+  color: #201E1E;
 }
 
 @media screen and (max-device-width: 880px) {
@@ -1269,16 +1261,67 @@ DARK MODE
   }
 }
 
+/*--------------------------------------------------------------------------------------------------
+DARK MODE
+--------------------------------------------------------------------------------------------------*/
+.primary-dark {
+  color: #FFFFFF;
+}
+
+.secondary-dark {
+  color: #6D6D6D;
+}
+
+.secondary-gray-dark {
+  color: #444444;
+}
+
+.borders-dark {
+  color: #212121;
+}
+
+.bg-dark {
+  color: #fff;
+}
+
+.bg-body-dark {
+  background-color: #000;
+}
+
+.menu-text-dark {
+  color: #6D6D6D;
+}
+
+.menu-text-dark:hover {
+  color: #FFFFFF;
+}
+
+.primary-vshover-dark {
+  color: #FFFFFF;
+}
+
+.primary-vshover-dark:hover {
+  color: #6D6D6D;
+}
+
+.primary-icons-dark {
+  fill: #FFFFFF;
+}
+
+.primary-icons-dark:hover {
+  fill: #6D6D6D;
+}
+
+.primary-fill-dark {
+  fill: #FFFFFF;
+}
+
 @media screen and (max-device-width: 880px) {
   .bottomBar-dark {
     background-color: rgba(0, 0, 0, 0.4);
     -webkit-backdrop-filter: blur(8px);
             backdrop-filter: blur(8px);
   }
-}
-
-.white-icons {
-  fill: #FFFFFF;
 }
 
 /* ------------------------------------------------------------------------------------------
