@@ -17,55 +17,105 @@ DARK MODE
 
 //COLORS
 .primary-dark {
-  color: setColor(dark, primary);
+  color: setColor(dark, primary) !important;
 }
 .secondary-dark {
-  color: setColor(dark, secondary);
+  color: setColor(dark, secondary) !important;
 }
 .secondary-gray-dark {
-  color: setColor(dark, secondary-gray);
+  color: setColor(dark, secondary-gray) !important;
 }
 .borders-dark {
-  color: setColor(dark, borders);
+  color: setColor(dark, borders) !important;
 }
 .bg-dark {
-  color: setColor(dark, bg);
+  color: setColor(dark, bg) !important;
 }
 .bg-body-dark {
-  background-color: setColor(dark, bg-body);
+  background-color: setColor(dark, bg-body) !important;
 }
 
 //TEXT AND ELEMENTS WITH HOVER
 .menu-text-dark {
-  color: setColor(dark, secondary);
+  color: setColor(dark, secondary) !important;
 
   &:hover {
-    color: setColor(dark, primary);
+    color: setColor(dark, primary) !important;
   }
 }
 .primary-vshover-dark {
-  color: setColor(dark, primary);
+  color: setColor(dark, primary) !important;
   &:hover {
-    color: setColor(dark, secondary);
+    color: setColor(dark, secondary) !important;
   }
 }
 
+//ICONS
 .primary-icons-dark {
-  fill: setColor(dark, primary);
+  fill: setColor(dark, primary) !important;
 
   &:hover {
-    fill: setColor(dark, secondary);
+    fill: setColor(dark, secondary) !important;
   }
 }
-
 .primary-fill-dark {
-  fill: setColor(dark, primary);
+  fill: setColor(dark, primary) !important;
+}
+.primary-fill-outline-dark {
+  stroke: setColor(dark, primary) !important;
+}
+.borders-fill-dark {
+  fill: setColor(dark, borders) !important;
 }
 
 //BOTTOM BAR
 .bottomBar-dark {
   @media screen and (max-device-width: 880px) {
-    background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.4) !important;
+    backdrop-filter: blur(8px) !important;
+  }
+}
+
+//BORDERS
+.border-top-dark {
+  border-top: setColor(dark, borders) 1px solid !important;
+}
+
+
+.border-top-vs-lastChildBottom-dark {
+  border-top: setColor(dark, borders) 1px solid !important;
+  &:last-child {
+    border-bottom: setColor(dark, borders) 1px solid !important;
+  }
+}
+
+.border-bottom-dark {
+  border-bottom: setColor(dark, borders) 1px solid !important;
+}
+.border-bottom-vs-noBorderLastChild-dark {
+  border-bottom: setColor(dark, borders) 1px solid !important;
+  &:last-child {
+    border-bottom: none !important;
+  }
+}
+.border-left-dark {
+  border-left: setColor(dark, borders) 1px solid !important;
+}
+.border-right-dark {
+  border-right: setColor(dark, borders) 1px solid !important;
+}
+.no-border {
+  border: none !important;
+}
+.border-left-mobile-dark {
+  border-left: none;
+  @media screen and (max-device-width: 880px) {
+    border-left: setColor(dark, borders) 1px solid !important;
+  }
+}
+.border-bottom-mobile-dark {
+  border-bottom: none;
+  @media screen and (max-device-width: 880px) {
+    border-bottom: setColor(dark, borders) 1px solid !important;
   }
 }

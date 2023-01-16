@@ -285,6 +285,8 @@ Services Screen
       padding-top: 20px;
     }
     &-noBorderBottom {
+      padding: 20px 0;
+      border-top: #eee solid 1px;
       &:last-child {
         border-bottom: none;
       }
