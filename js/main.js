@@ -6,6 +6,7 @@ moreButton.addEventListener("click", function () {
   document.querySelector(".bigMenu").classList.toggle("hide-block");
   document.querySelector(".body").classList.toggle("hide-scroll");
   document.querySelector(".bottomBar").classList.toggle("bottomBarZ");
+  document.querySelector(".bottomBar").classList.toggle("menu-active-bar");
 
   if (darkmodeStatus == false) {
     toWhite();
@@ -13,7 +14,6 @@ moreButton.addEventListener("click", function () {
 });
 
 function toWhite() {
-  document.querySelector(".bottomBar").classList.toggle("menu-active-bar");
   document.querySelectorAll(".bottomBar-wrapper-icon").forEach((item) => {
     item.classList.add("primary-icons-dark");
   });
@@ -32,6 +32,7 @@ closeMenuButton.addEventListener("click", function () {
   document.querySelector(".bigMenu").classList.toggle("hide-block");
   document.querySelector(".body").classList.toggle("hide-scroll");
   document.querySelector(".bottomBar").classList.toggle("bottomBarZ");
+  document.querySelector(".bottomBar").classList.toggle("menu-active-bar");
 
   if (darkmodeStatus == false) {
     toDark();
@@ -39,7 +40,6 @@ closeMenuButton.addEventListener("click", function () {
 });
 
 function toDark() {
-  document.querySelector(".bottomBar").classList.toggle("menu-active-bar");
   document.querySelectorAll(".bottomBar-wrapper-icon").forEach((item) => {
     item.classList.remove("primary-icons-dark");
   });

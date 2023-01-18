@@ -1250,7 +1250,7 @@ Components
 LIGHT MODE
 --------------------------------------------------------------------------------------------------*/
 .primary-light {
-  color: #201E1E;
+  color: #201E1E !important;
 }
 
 @media screen and (max-device-width: 880px) {
@@ -1276,12 +1276,17 @@ DARK MODE
   color: #444444 !important;
 }
 
+/*
 .borders-dark {
-  color: #212121 !important;
+  color: setColor(dark, borders) !important;
+}
+*/
+.dark-dark {
+  color: #000 !important;
 }
 
 .bg-dark {
-  color: #fff !important;
+  background-color: #fff !important;
 }
 
 .bg-body-dark {
@@ -2000,6 +2005,17 @@ Footer
 
 .footer-watchProject-text {
   color: #FFFFFF;
+  font-size: 14px;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 21px;
+}
+
+@media screen and (max-device-width: 576px) {
+  .footer-watchProject-text {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 
 .footer-watchProject-line {
@@ -2415,9 +2431,9 @@ Footer
 }
 
 .menu-active-bar {
-  background: none;
-  -webkit-backdrop-filter: none;
-          backdrop-filter: none;
+  background: none !important;
+  -webkit-backdrop-filter: none !important;
+          backdrop-filter: none !important;
 }
 
 .bottomBarZ {

@@ -1,6 +1,8 @@
 "use strict";
 
 let darkmodeStatus = false;
+let currentLocation = document.location.pathname;
+console.log(currentLocation);
 
 //DARKMODE INIT
 window.addEventListener("load", function () {
@@ -11,7 +13,13 @@ window.addEventListener("load", function () {
   }
 });
 
-//COMPONENTS INIT
+if (currentLocation == "/index.html") {
+  console.log("Location is index.html");
+} else {
+  console.log("wrong location");
+}
+
+//MAIN COMPONENTS INIT
 let darkmodeButton = document.getElementById("darkMode");
 
 let backgroundBody = document.querySelector(".body"),
@@ -22,6 +30,9 @@ let bottomBar = document.querySelector(".bottomBar"),
   bottomBarIcons = document.querySelectorAll(".bottomBar-wrapper-icon"),
   bottomBarLanguage = document.querySelector(".bottomBar-rightbar-language");
 let bigMenu = document.querySelector(".bigMenu");
+
+//COMPONENTS INIT
+
 //cta
 let caption = document.querySelectorAll(".caption"),
   h2 = document.querySelectorAll(".h2"),
@@ -39,14 +50,29 @@ let serviceBlock = document.querySelector(".service"),
   serviceTitle = document.querySelector(".service-title"),
   serviceBlockRightBlock = document.querySelector(".service-block"),
   serviceListBigIcon = document.querySelectorAll(".serviceList-title-showIcon"),
-  serviceListSmallIcon = document.querySelectorAll(".serviceList-title-showIconSmall"),
+  serviceListSmallIcon = document.querySelectorAll(
+    ".serviceList-title-showIconSmall"
+  ),
   servicesSmallList = document.querySelectorAll(".serviceList-item"),
   serviceBigList = document.querySelectorAll(".serviceList"),
-  servicesSmallListDesigner = document.querySelector(".serviceList-item-noBorderBottom"),
+  servicesSmallListDesigner = document.querySelector(
+    ".serviceList-item-noBorderBottom"
+  ),
   h3 = document.querySelectorAll(".h3"),
   h3SubList = document.querySelectorAll(".serviceList-item-title-h3Sub"),
   sumDescription = document.querySelectorAll(".serviceList-sum-description");
-
+//footer
+let footerRightBlock = document.querySelector(".footer-leftBlock"),
+  footerLogo = document.querySelector(".footer-leftBlock-up-logoImg"),
+  footerMenuItem = document.querySelectorAll(".footer-menu-item"),
+  footerWatchProjectBlock = document.querySelector(".footer-watchProject"),
+  footerWatchProjectButton = document.querySelector(
+    ".footer-watchProject-text"
+  ),
+  footerWatchProjectButtonUnderline = document.querySelector(
+    ".footer-watchProject-line"
+  ),
+  footerCopyright = document.querySelector(".footer-leftBlock-copyright");
 
 //DARK BUTTON EVENT
 darkmodeButton.addEventListener("click", function () {
@@ -66,6 +92,30 @@ function setDarkmode() {
 
 function setDark() {
   backgroundBody.classList.add("bg-body-dark");
+  barsToDark();
+  if (currentLocation == "/index.html") {
+    ctaPageToDark();
+    footerToDark();
+  }
+
+  //STATUS DARKMODE
+  darkmodeStatus = true;
+}
+
+function setLight() {
+  backgroundBody.classList.remove("bg-body-dark");
+  barsToWhite();
+  if (currentLocation == "/index.html") {
+    ctaPageToLight();
+    footerToLight();
+  }
+
+  //STATUS DARKMODE
+  darkmodeStatus = false;
+}
+
+//MODULES
+function barsToDark() {
   //HEADER
   headerLogo.classList.add("primary-fill-dark");
   headerLogoMobile.classList.add("primary-fill-dark");
@@ -87,6 +137,32 @@ function setDark() {
   if (bigMenu.classList.contains("hide-block")) {
     toWhite();
   }
+}
+function barsToWhite() {
+  //HEADER
+  headerLogo.classList.remove("primary-fill-dark");
+  headerLogoMobile.classList.remove("primary-fill-dark");
+  headerLink.forEach((item) => {
+    item.classList.remove("menu-text-dark");
+  });
+  moreButton.classList.remove("primary-fill-dark");
+  if (pageScrollPosition > 0 && isMobile == true) {
+    headerBG.classList.add("headerNoBg");
+    headerBG.classList.remove("header-bg-dark");
+  }
+  //BOTTOM BAR
+  bottomBar.classList.remove("bottomBar-dark");
+  bottomBarIcons.forEach((item) => {
+    item.classList.remove("primary-icons-dark");
+  });
+  darkmodeButton.classList.remove("primary-icons-dark");
+  bottomBarLanguage.classList.remove("primary-vshover-dark");
+  if (bigMenu.classList.contains("hide-block")) {
+    toWhite();
+  }
+}
+
+function ctaPageToDark() {
   //MAIN PAGE — CTA BLOCK
   caption.forEach((item) => {
     item.classList.add("secondary-gray-dark");
@@ -138,33 +214,9 @@ function setDark() {
   sumDescription.forEach((item) => {
     item.classList.add("secondary-gray-dark");
   });
-  //STATUS DARKMODE
-  darkmodeStatus = true;
 }
 
-function setLight() {
-  backgroundBody.classList.remove("bg-body-dark");
-  //HEADER
-  headerLogo.classList.remove("primary-fill-dark");
-  headerLogoMobile.classList.remove("primary-fill-dark");
-  headerLink.forEach((item) => {
-    item.classList.remove("menu-text-dark");
-  });
-  moreButton.classList.remove("primary-fill-dark");
-  if (pageScrollPosition > 0 && isMobile == true) {
-    headerBG.classList.add("headerNoBg");
-    headerBG.classList.remove("header-bg-dark");
-  }
-  //BOTTOM BAR
-  bottomBar.classList.remove("bottomBar-dark");
-  bottomBarIcons.forEach((item) => {
-    item.classList.remove("primary-icons-dark");
-  });
-  darkmodeButton.classList.remove("primary-icons-dark");
-  bottomBarLanguage.classList.remove("primary-vshover-dark");
-  if (bigMenu.classList.contains("hide-block")) {
-    toWhite();
-  }
+function ctaPageToLight() {
   //MAIN PAGE — CTA BLOCK
   caption.forEach((item) => {
     item.classList.remove("secondary-gray-dark");
@@ -216,7 +268,30 @@ function setLight() {
   sumDescription.forEach((item) => {
     item.classList.remove("secondary-gray-dark");
   });
+}
 
-  //STATUS DARKMODE
-  darkmodeStatus = false;
+function footerToDark() {
+  //FOOTER
+  footerRightBlock.classList.add("border-top-dark");
+  footerLogo.classList.add("primary-fill-dark");
+  footerMenuItem.forEach((item) => {
+    item.classList.add("menu-text-dark");
+  });
+  footerWatchProjectBlock.classList.add("bg-dark");
+  footerWatchProjectButton.classList.add("dark-dark");
+  footerWatchProjectButtonUnderline.classList.add("bg-body-dark");
+  footerCopyright.classList.add("secondary-gray-dark");
+}
+
+function footerToLight() {
+  //FOOTER
+  footerRightBlock.classList.remove("border-top-dark");
+  footerLogo.classList.remove("primary-fill-dark");
+  footerMenuItem.forEach((item) => {
+    item.classList.remove("menu-text-dark");
+  });
+  footerWatchProjectBlock.classList.remove("bg-dark");
+  footerWatchProjectButton.classList.remove("dark-dark");
+  footerWatchProjectButtonUnderline.classList.remove("bg-body-dark");
+  footerCopyright.classList.remove("secondary-gray-dark");
 }

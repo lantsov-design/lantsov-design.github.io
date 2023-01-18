@@ -2,7 +2,7 @@
 LIGHT MODE
 --------------------------------------------------------------------------------------------------*/
 .primary-light {
-  color: setColor(light, primary);
+  color: setColor(light, primary) !important;
 }
 .bottomBar-light {
   @media screen and (max-device-width: 880px) {
@@ -25,11 +25,16 @@ DARK MODE
 .secondary-gray-dark {
   color: setColor(dark, secondary-gray) !important;
 }
+/*
 .borders-dark {
   color: setColor(dark, borders) !important;
 }
+*/
+.dark-dark {
+  color: setColor(dark, bg-body) !important;
+}
 .bg-dark {
-  color: setColor(dark, bg) !important;
+  background-color: setColor(dark, bg) !important;
 }
 .bg-body-dark {
   background-color: setColor(dark, bg-body) !important;
