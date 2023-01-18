@@ -1361,6 +1361,10 @@ DARK MODE
   border-bottom: none !important;
 }
 
+.border-bottom-errorPage-dark {
+  border-bottom: #FFFFFF 1px solid !important;
+}
+
 .border-left-dark {
   border-left: #212121 1px solid !important;
 }
@@ -2488,12 +2492,17 @@ Footer
 }
 
 .projectsPage-nav-leftIcon {
+  stroke: #201E1E;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
 .projectsPage-nav-leftIcon:hover {
   cursor: pointer;
+}
+
+.projectsPage-nav-rightIcon {
+  stroke: #201E1E;
 }
 
 .projectsPage-nav-rightIcon:hover {
@@ -2540,6 +2549,17 @@ Footer
 .projectsPage-projectCard-count {
   margin-bottom: 20px;
   color: #A0A0A0;
+  font-size: 14px;
+  font-style: normal;
+  text-decoration: none;
+  line-height: 21px;
+}
+
+@media screen and (max-device-width: 576px) {
+  .projectsPage-projectCard-count {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
 
 .projectsPage-projectCard-img-1 {

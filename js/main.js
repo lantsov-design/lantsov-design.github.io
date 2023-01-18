@@ -32,7 +32,7 @@ closeMenuButton.addEventListener("click", function () {
   document.querySelector(".bigMenu").classList.toggle("hide-block");
   document.querySelector(".body").classList.toggle("hide-scroll");
   document.querySelector(".bottomBar").classList.toggle("bottomBarZ");
-  document.querySelector(".bottomBar").classList.toggle("menu-active-bar");
+    document.querySelector(".bottomBar").classList.toggle("menu-active-bar");
 
   if (darkmodeStatus == false) {
     toDark();

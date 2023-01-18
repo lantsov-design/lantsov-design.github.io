@@ -6,14 +6,19 @@ console.log(currentLocation);
 
 //DARKMODE INIT
 window.addEventListener("load", function () {
+  if (localStorage.getItem("darkmode") === "true") {
+    darkmodeStatus = true;
+  } else {
+    darkmodeStatus = false;
+  }
+});
+window.addEventListener("load", function () {
   if (darkmodeStatus == true) {
     setDark();
-  } else {
-    setLight();
   }
 });
 
-if (currentLocation == "/index.html") {
+if (currentLocation == "/" || currentLocation == "/index.html") {
   console.log("Location is index.html");
 } else {
   console.log("wrong location");
@@ -93,24 +98,42 @@ function setDarkmode() {
 function setDark() {
   backgroundBody.classList.add("bg-body-dark");
   barsToDark();
-  if (currentLocation == "/index.html") {
+  //Need fix for mobile "location bug"
+  if (currentLocation == "/" || currentLocation == "/index.html") {
     ctaPageToDark();
     footerToDark();
   }
+  if (currentLocation == "/pages/projects.html") {
+    projectPageToDark();
+  }
+  if (currentLocation == "/404.html") {
+    errorPageToDark();
+  }
 
   //STATUS DARKMODE
+  localStorage.setItem("darkmode", "true");
+  console.log(localStorage.getItem("darkmode"));
   darkmodeStatus = true;
 }
 
 function setLight() {
   backgroundBody.classList.remove("bg-body-dark");
   barsToWhite();
-  if (currentLocation == "/index.html") {
+  //Need fix for mobile "location bug"
+  if (currentLocation == "/" || currentLocation == "/index.html") {
     ctaPageToLight();
     footerToLight();
   }
+  if (currentLocation == "/pages/projects.html") {
+    projectPageToLight();
+  }
+  if (currentLocation == "/404.html") {
+    errorPageToLight();
+  }
 
   //STATUS DARKMODE
+  localStorage.setItem("darkmode", "false");
+  console.log(localStorage.getItem("darkmode"));
   darkmodeStatus = false;
 }
 
@@ -294,4 +317,66 @@ function footerToLight() {
   footerWatchProjectButton.classList.remove("dark-dark");
   footerWatchProjectButtonUnderline.classList.remove("bg-body-dark");
   footerCopyright.classList.remove("secondary-gray-dark");
+}
+
+/*----------------------------------------------------------------------------------
+PROJECTS PAGE
+----------------------------------------------------------------------------------*/
+let projectPageCountProject = document.querySelectorAll(
+    ".projectsPage-projectCard-count"
+  ),
+  projectPageCountProjectBorder = document.querySelectorAll(
+    ".projectsPage-projectCard-wrapper"
+  ),
+  projectPageLeftArrow = document.querySelector(".projectsPage-nav-leftIcon"),
+  projectPageRightArrow = document.querySelector(".projectsPage-nav-rightIcon");
+
+function projectPageToDark() {
+  projectPageLeftArrow.classList.add("primary-fill-outline-dark");
+  projectPageRightArrow.classList.add("primary-fill-outline-dark");
+  projectPageCountProject.forEach((item) => {
+    item.classList.add("secondary-dark");
+  });
+  projectPageCountProjectBorder.forEach((item) => {
+    item.classList.add("border-top-dark");
+  });
+  textSmall.forEach((item) => {
+    item.classList.add("primary-dark");
+  });
+}
+
+function projectPageToLight() {
+  projectPageLeftArrow.classList.remove("primary-fill-outline-dark");
+  projectPageRightArrow.classList.remove("primary-fill-outline-dark");
+  projectPageCountProject.forEach((item) => {
+    item.classList.remove("secondary-dark");
+  });
+  projectPageCountProjectBorder.forEach((item) => {
+    item.classList.remove("border-top-dark");
+  });
+  textSmall.forEach((item) => {
+    item.classList.remove("primary-dark");
+  });
+}
+
+/*----------------------------------------------------------------------------------
+404 PAGE
+----------------------------------------------------------------------------------*/
+let errorIllustration = document.querySelector(".error-wrapper-illustration"),
+ errorBorderText = document.querySelector(".error-wrapper-link");
+
+function errorPageToDark() {
+  errorIllustration.classList.add("primary-fill-dark");
+  text.forEach((item) => {
+    item.classList.add("primary-dark");
+  });
+  errorBorderText.classList.add("border-bottom-errorPage-dark");
+}
+
+function errorPageToLight() {
+  errorIllustration.classList.remove("primary-fill-dark");
+  text.forEach((item) => {
+    item.classList.remove("primary-dark");
+  });
+  errorBorderText.classList.remove("border-bottom-errorPage-dark");
 }

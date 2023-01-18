@@ -103,6 +103,9 @@ DARK MODE
     border-bottom: none !important;
   }
 }
+.border-bottom-errorPage-dark {
+  border-bottom: setColor(dark, primary) 1px solid !important;
+}
 .border-left-dark {
   border-left: setColor(dark, borders) 1px solid !important;
 }

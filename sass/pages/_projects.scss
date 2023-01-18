@@ -32,6 +32,7 @@
     width: 100%;
 
     &-leftIcon {
+      stroke: setColor(light, primary);
       transform: rotate(180deg);
       &:hover {
         cursor: pointer;
@@ -39,6 +40,7 @@
     }
 
     &-rightIcon {
+      stroke: setColor(light, primary);
       &:hover {
         cursor: pointer;
       }
@@ -69,6 +71,17 @@
     &-count {
       margin-bottom: 20px;
       color: setColor(light, secondary);
+
+      font-size: setFontSize(desktop, small-text);
+      font-style: normal;
+      text-decoration: none;
+  
+      line-height: 21px;
+  
+      @media screen and (max-device-width: 576px) {
+          font-size: setFontSize(mobile, small-text);
+          line-height: 18px;
+      }
     }
     &-img {
       &-1 {
