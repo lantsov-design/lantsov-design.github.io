@@ -1486,6 +1486,105 @@ a {
   text-decoration: none;
 }
 
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  visibility: visible;
+  background: no-repeat url("../images/PreloaderLogo.svg") center;
+  background-size: 30%;
+  height: 100vh;
+  width: 100%;
+  z-index: 200;
+  background-color: #fff;
+  opacity: 100%;
+  -webkit-transition: opacity ease-in 0.4s;
+  transition: opacity ease-in 0.4s;
+}
+
+.preloader-hide-animate {
+  opacity: 0%;
+  -webkit-transition: opacity ease-in 0.4s;
+  transition: opacity ease-in 0.4s;
+}
+
+.preloader-hide {
+  display: none;
+}
+
+.gooey {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 142px;
+  height: 40px;
+  margin: -20px 0 0 -71px;
+  -webkit-filter: contrast(20);
+          filter: contrast(20);
+}
+
+.gooey .dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 12px;
+  left: 15px;
+  background: #000;
+  border-radius: 50%;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-animation: dot 2.8s infinite;
+          animation: dot 2.8s infinite;
+}
+
+.gooey .dots {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  margin-top: 12px;
+  margin-left: 31px;
+  -webkit-animation: dots 2.8s infinite;
+          animation: dots 2.8s infinite;
+}
+
+.gooey .dots span {
+  display: block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  margin-left: 16px;
+  background: #000;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes dot {
+  50% {
+    -webkit-transform: translateX(96px);
+            transform: translateX(96px);
+  }
+}
+
+@keyframes dot {
+  50% {
+    -webkit-transform: translateX(96px);
+            transform: translateX(96px);
+  }
+}
+
+@-webkit-keyframes dots {
+  50% {
+    -webkit-transform: translateX(-31px);
+            transform: translateX(-31px);
+  }
+}
+
+@keyframes dots {
+  50% {
+    -webkit-transform: translateX(-31px);
+            transform: translateX(-31px);
+  }
+}
+
 /* -----------------------------------------------------------------------------------------------------------
 CTA Screen (Not BEM style =( )
 ----------------------------------------------------------------------------------------------------------- */

@@ -18,12 +18,6 @@ window.addEventListener("load", function () {
   }
 });
 
-if (currentLocation == "/" || currentLocation == "/index.html") {
-  console.log("Location is index.html");
-} else {
-  console.log("wrong location");
-}
-
 //MAIN COMPONENTS INIT
 let darkmodeButton = document.getElementById("darkMode");
 

@@ -118,3 +118,18 @@ window.addEventListener("resize", function () {
   }
   */
 });
+let currentPageLocation = document.location.pathname;
+if (currentPageLocation != "/404.html" && currentPageLocation != "/pages/contacts.html") {
+  window.addEventListener("load", function () {
+    this.setTimeout(preloader, 2000);
+    this.setTimeout(preloaderHide, 1600);
+  });
+  function preloader() {
+    document.querySelector(".body").classList.toggle("hide-scroll");
+    document.querySelector(".preloader").classList.add("preloader-hide-animate");
+  }
+  function preloaderHide() {
+    document.querySelector(".preloader").classList.add("preloader-hide");
+  }  
+}
+
