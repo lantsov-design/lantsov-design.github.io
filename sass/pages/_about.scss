@@ -136,6 +136,10 @@
       color: setColor(light, primary);
     }
   }
+  &-sectionTitle-dark {
+    border-left: setColor(dark, borders) solid 1px;
+    border-right: setColor(dark, borders) solid 1px;
+  }
   &-card {
     box-sizing: border-box;
     padding: 80px 20px;
@@ -178,7 +182,25 @@
       }
       &Icon {
         margin-right: 20px;
+        height: 6px;
+        width: 6px;
       }
+    }
+  }
+  &-card-dark {
+    &:nth-child(1) {
+      border-right: setColor(dark, borders) solid 1px;
+      border-bottom: setColor(dark, borders) solid 1px;
+    }
+    &:nth-child(2) {
+      border-right: setColor(dark, borders) solid 1px;
+      border-bottom: setColor(dark, borders) solid 1px;
+    }
+    &:nth-child(3) {
+      border-right: setColor(dark, borders) solid 1px;
+    }
+    &:nth-child(4) {
+      border-right: setColor(dark, borders) solid 1px;
     }
   }
 }
@@ -194,10 +216,18 @@
       border-right: setColor(light, borders) solid 1px;
       border-bottom: setColor(light, borders) solid 1px;
     }
+    &-sectionTitle-dark {
+      border-left: setColor(dark, borders) solid 1px;
+      border-right: setColor(dark, borders) solid 1px;
+      border-bottom: setColor(dark, borders) solid 1px;
+    }
     &-cardsContainer {
       border-right: setColor(light, borders) solid 1px;
       border-left: setColor(light, borders) solid 1px;
-  
+    }
+    &-cardsContainer-dark {
+      border-right: setColor(dark, borders) solid 1px;
+      border-left: setColor(dark, borders) solid 1px;
     }
     &-card {
       padding: 20px;
@@ -220,6 +250,25 @@
       }
       &-count {
         margin-bottom: 40px;
+      }
+    }
+    &-card-dark {
+      border-bottom: setColor(dark, borders) solid 1px;
+  
+      &:nth-child(1) {
+        border-right: none;
+      }
+      &:nth-child(2) {
+        border-right: none;
+      }
+      &:nth-child(3) {
+        border-right: none;
+      }
+      &:nth-child(4) {
+        border-right: none;
+      }
+      &:last-child {
+        border-bottom: none;
       }
     }
   }
@@ -297,6 +346,13 @@
         @include menu-text-light;
         margin-left: 40px;
       }
+    }
+    &-card-dark {
+      &:first-child {
+        border-top: setColor(dark, borders) solid 1px;
+      }
+
+      border-bottom: setColor(dark, borders) solid 1px;
     }
   }
 }

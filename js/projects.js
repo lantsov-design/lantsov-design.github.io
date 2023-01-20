@@ -143,7 +143,7 @@ function autocountSlider() {
   });
 
   /* Normal count from 01 to XX
-    for (let i = 0; i <= projectCardCountArray.length; i++) {
+    for (let i = 0; i < projectCardCountArray.length; i++) {
       let currentCountTitle = projectCardCountArray[i];
       if (i <= 8) {
         currentCountTitle.textContent = `0${i+1}.`;

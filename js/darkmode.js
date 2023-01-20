@@ -30,7 +30,8 @@ let darkmodeButton = document.getElementById("darkMode");
 let backgroundBody = document.querySelector(".body"),
   headerLogo = document.querySelector(".header-wrapper-logo"),
   headerLogoMobile = document.querySelector(".header-wrapper-logoMobile"),
-  headerLink = document.querySelectorAll(".header-wrapper-menu-link");
+  headerLink = document.querySelectorAll(".header-wrapper-menu-link"),
+  headerLinkActive = document.querySelector(".header-wrapper-menu-linkDisbled");
 let bottomBar = document.querySelector(".bottomBar"),
   bottomBarIcons = document.querySelectorAll(".bottomBar-wrapper-icon"),
   bottomBarLanguage = document.querySelector(".bottomBar-rightbar-language");
@@ -109,6 +110,13 @@ function setDark() {
   if (currentLocation == "/404.html") {
     errorPageToDark();
   }
+  if (currentLocation == "/pages/contacts.html") {
+    contactPageToDark();
+  }
+  if (currentLocation == "/pages/about.html") {
+    aboutPageToDark();
+    footerToDark();
+  }
 
   //STATUS DARKMODE
   localStorage.setItem("darkmode", "true");
@@ -130,6 +138,13 @@ function setLight() {
   if (currentLocation == "/404.html") {
     errorPageToLight();
   }
+  if (currentLocation == "/pages/contacts.html") {
+    contactPageToLight();
+  }
+  if (currentLocation == "/pages/about.html") {
+    aboutPageToLight();
+    footerToLight();
+  }
 
   //STATUS DARKMODE
   localStorage.setItem("darkmode", "false");
@@ -144,6 +159,10 @@ function barsToDark() {
   headerLogoMobile.classList.add("primary-fill-dark");
   headerLink.forEach((item) => {
     item.classList.add("menu-text-dark");
+    if (item.classList.contains("header-wrapper-menu-linkDisbled")) {
+      item.classList.remove("menu-text-dark");
+      item.classList.add("primary-dark");
+    }
   });
   moreButton.classList.add("primary-fill-dark");
   if (pageScrollPosition > 0 && isMobile == true) {
@@ -167,6 +186,9 @@ function barsToWhite() {
   headerLogoMobile.classList.remove("primary-fill-dark");
   headerLink.forEach((item) => {
     item.classList.remove("menu-text-dark");
+    if (item.classList.contains("header-wrapper-menu-linkDisbled")) {
+      item.classList.remove("primary-dark");
+    }
   });
   moreButton.classList.remove("primary-fill-dark");
   if (pageScrollPosition > 0 && isMobile == true) {
@@ -363,7 +385,7 @@ function projectPageToLight() {
 404 PAGE
 ----------------------------------------------------------------------------------*/
 let errorIllustration = document.querySelector(".error-wrapper-illustration"),
- errorBorderText = document.querySelector(".error-wrapper-link");
+  errorBorderText = document.querySelector(".error-wrapper-link");
 
 function errorPageToDark() {
   errorIllustration.classList.add("primary-fill-dark");
@@ -379,4 +401,181 @@ function errorPageToLight() {
     item.classList.remove("primary-dark");
   });
   errorBorderText.classList.remove("border-bottom-errorPage-dark");
+}
+
+/*----------------------------------------------------------------------------------
+CONTACTS PAGE
+----------------------------------------------------------------------------------*/
+let contactPageSpan = document.querySelector(".contactsPage-h3-span"),
+  contactPageSocialLinks = document.querySelectorAll(
+    ".contactsPage-rightBlock-linksList-link"
+  );
+
+function contactPageToDark() {
+  h3.forEach((item) => {
+    item.classList.add("primary-dark");
+  });
+  contactPageSpan.classList.add("border-bottom-errorPage-dark");
+  contactPageSocialLinks.forEach((item) => {
+    item.classList.add("menu-text-dark");
+  });
+}
+
+function contactPageToLight() {
+  h3.forEach((item) => {
+    item.classList.remove("primary-dark");
+  });
+  contactPageSpan.classList.remove("border-bottom-errorPage-dark");
+  contactPageSocialLinks.forEach((item) => {
+    item.classList.remove("menu-text-dark");
+  });
+}
+
+/*----------------------------------------------------------------------------------
+ABOUT PAGE
+----------------------------------------------------------------------------------*/
+let aboutCTALeftBlock = document.querySelector(".aboutCTA-wrapper-leftBlock"),
+  aboutCTALeftBlockCaption = document.querySelector(
+    ".aboutCTA-wrapper-leftBlock-caption"
+  ),
+  aboutCTALeftBlockBorder = document.querySelector(
+    ".aboutCTA-wrapper-leftBlock-border"
+  );
+
+let resumeButton = document.getElementById("resumeButton"),
+  resumeButtonIcon = document.querySelector(".startProjectButton-img");
+
+let skillsBlockTitle = document.querySelector(".skills-sectionTitle-text"),
+  skillsBlock = document.querySelector(".skills"),
+  skillsBlockTitleBlock = document.querySelector(".skills-sectionTitle"),
+  skillsCard = document.querySelectorAll(".skills-card"),
+  skillsCardContainer = document.querySelector(".skills-cardsContainer"),
+  skillsCardListIcon = document.querySelectorAll(".skills-card-listIcon"),
+  skillsCardCount = document.querySelectorAll(".skills-card-count");
+
+let awradsTitle = document.querySelector(".awards-wrapper-text"),
+  awardsBorders = document.querySelectorAll(".awards-wrapper-card"),
+  awardsCount = document.querySelectorAll(".awards-wrapper-card-count"),
+  awardYear = document.querySelectorAll(".awards-wrapper-card-year"),
+  awardsCardTitle = document.querySelectorAll(".awards-wrapper-card-text");
+
+function aboutPageToDark() {
+  caption.forEach((item) => {
+    item.classList.add("secondary-gray-dark");
+  });
+  h2.forEach((item) => {
+    item.classList.add("primary-dark");
+  });
+  h3.forEach((item) => {
+    item.classList.add("primary-dark");
+  });
+  text.forEach((item) => {
+    item.classList.add("secondary-dark");
+  });
+  textSmall.forEach((item) => {
+    item.classList.add("secondary-gray-dark");
+  });
+  aboutCTALeftBlock.classList.add("border-left-dark");
+  aboutCTALeftBlock.classList.add("border-right-dark");
+  aboutCTALeftBlockCaption.classList.add("border-bottom-dark");
+
+  resumeButton.classList.add("border-top-dark");
+  resumeButton.classList.add("primary-dark");
+  resumeButtonIcon.classList.add("primary-fill-outline-dark");
+
+  aboutCTALeftBlockBorder.classList.add("border-top-dark");
+
+  //Skills block
+  skillsBlockTitle.classList.remove("secondary-dark");
+  skillsBlockTitle.classList.add("primary-dark");
+  skillsBlock.classList.add("border-top-dark");
+  skillsBlock.classList.add("border-bottom-dark");
+  skillsBlockTitleBlock.classList.add("skills-sectionTitle-dark");
+  skillsCard.forEach((item) => {
+    item.classList.add("skills-card-dark");
+  });
+  skillsCardContainer.classList.add("skills-cardsContainer-dark");
+  skillsCardListIcon.forEach((item) => {
+    item.classList.add("primary-fill-dark");
+  });
+  skillsCardCount.forEach((item) => {
+    item.classList.remove("secondary-dark");
+    item.classList.add("primary-dark");
+  });
+
+  //Awards
+  awradsTitle.classList.remove("secondary-dark");
+  awradsTitle.classList.add("primary-dark");
+  awardsBorders.forEach((item) => {
+    item.classList.add("awards-wrapper-card-dark");
+  });
+  awardsCount.forEach((item) => {
+    item.classList.add("secondary-dark");
+  });
+  awardYear.forEach((item) => {
+    item.classList.add("secondary-dark");
+  });
+  awardsCardTitle.forEach((item) => {
+    item.classList.remove("secondary-dark");
+    item.classList.add("primary-dark");
+  });
+  
+}
+
+function aboutPageToLight() {
+  caption.forEach((item) => {
+    item.classList.remove("secondary-gray-dark");
+  });
+  h2.forEach((item) => {
+    item.classList.remove("primary-dark");
+  });
+  h3.forEach((item) => {
+    item.classList.remove("primary-dark");
+  });
+  text.forEach((item) => {
+    item.classList.remove("secondary-dark");
+  });
+  textSmall.forEach((item) => {
+    item.classList.remove("secondary-gray-dark");
+  });
+  aboutCTALeftBlock.classList.remove("border-left-dark");
+  aboutCTALeftBlock.classList.remove("border-right-dark");
+  aboutCTALeftBlockCaption.classList.remove("border-bottom-dark");
+
+  resumeButton.classList.remove("border-top-dark");
+  resumeButton.classList.remove("primary-dark");
+  resumeButtonIcon.classList.remove("primary-fill-outline-dark");
+
+  aboutCTALeftBlockBorder.classList.remove("border-top-dark");
+
+  //Skills block
+  skillsBlockTitle.classList.remove("primary-dark");
+  skillsBlock.classList.remove("border-top-dark");
+  skillsBlock.classList.remove("border-bottom-dark");
+  skillsBlockTitleBlock.classList.remove("skills-sectionTitle-dark");
+  skillsCard.forEach((item) => {
+    item.classList.remove("skills-card-dark");
+  });
+  skillsCardContainer.classList.remove("skills-cardsContainer-dark");
+  skillsCardListIcon.forEach((item) => {
+    item.classList.remove("primary-fill-dark");
+  });
+  skillsCardCount.forEach((item) => {
+    item.classList.remove("primary-dark");
+  });
+
+  //Awards
+  awradsTitle.classList.remove("primary-dark");
+  awardsBorders.forEach((item) => {
+    item.classList.remove("awards-wrapper-card-dark");
+  });
+  awardsCount.forEach((item) => {
+    item.classList.remove("secondary-dark");
+  });
+  awardYear.forEach((item) => {
+    item.classList.remove("secondary-dark");
+  });
+  awardsCardTitle.forEach((item) => {
+    item.classList.remove("primary-dark");
+  });
 }

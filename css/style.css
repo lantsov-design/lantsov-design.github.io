@@ -874,7 +874,7 @@ Components
   color: #201E1E;
 }
 
-@media screen and (max-device-width: 576px) {
+@media screen and (max-device-width: 704px) {
   .header {
     padding: 20px 20px;
   }
@@ -1425,8 +1425,8 @@ Pages
 
 @media screen and (max-device-width: 576px) {
   .h3 {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 14px;
+    line-height: 18px;
   }
 }
 
@@ -3589,6 +3589,11 @@ Footer
   color: #201E1E;
 }
 
+.skills-sectionTitle-dark {
+  border-left: #212121 solid 1px;
+  border-right: #212121 solid 1px;
+}
+
 .skills-card {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -3647,6 +3652,26 @@ Footer
 
 .skills-card-listIcon {
   margin-right: 20px;
+  height: 6px;
+  width: 6px;
+}
+
+.skills-card-dark:nth-child(1) {
+  border-right: #212121 solid 1px;
+  border-bottom: #212121 solid 1px;
+}
+
+.skills-card-dark:nth-child(2) {
+  border-right: #212121 solid 1px;
+  border-bottom: #212121 solid 1px;
+}
+
+.skills-card-dark:nth-child(3) {
+  border-right: #212121 solid 1px;
+}
+
+.skills-card-dark:nth-child(4) {
+  border-right: #212121 solid 1px;
 }
 
 @media screen and (max-device-width: 880px) {
@@ -3660,9 +3685,18 @@ Footer
     border-right: #EEEEEE solid 1px;
     border-bottom: #EEEEEE solid 1px;
   }
+  .skills-sectionTitle-dark {
+    border-left: #212121 solid 1px;
+    border-right: #212121 solid 1px;
+    border-bottom: #212121 solid 1px;
+  }
   .skills-cardsContainer {
     border-right: #EEEEEE solid 1px;
     border-left: #EEEEEE solid 1px;
+  }
+  .skills-cardsContainer-dark {
+    border-right: #212121 solid 1px;
+    border-left: #212121 solid 1px;
   }
   .skills-card {
     padding: 20px;
@@ -3685,6 +3719,24 @@ Footer
   }
   .skills-card-count {
     margin-bottom: 40px;
+  }
+  .skills-card-dark {
+    border-bottom: #212121 solid 1px;
+  }
+  .skills-card-dark:nth-child(1) {
+    border-right: none;
+  }
+  .skills-card-dark:nth-child(2) {
+    border-right: none;
+  }
+  .skills-card-dark:nth-child(3) {
+    border-right: none;
+  }
+  .skills-card-dark:nth-child(4) {
+    border-right: none;
+  }
+  .skills-card-dark:last-child {
+    border-bottom: none;
   }
 }
 
@@ -3795,6 +3847,14 @@ Footer
   color: #A0A0A0;
   text-decoration: none;
   margin-left: 40px;
+}
+
+.awards-wrapper-card-dark {
+  border-bottom: #212121 solid 1px;
+}
+
+.awards-wrapper-card-dark:first-child {
+  border-top: #212121 solid 1px;
 }
 
 @media screen and (max-device-width: 578px) {
