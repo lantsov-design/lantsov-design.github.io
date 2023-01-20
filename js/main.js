@@ -118,11 +118,12 @@ window.addEventListener("resize", function () {
   }
   */
 });
+//Preloader
 let currentPageLocation = document.location.pathname;
 if (currentPageLocation != "/404.html") {
   window.addEventListener("load", function () {
     this.setTimeout(preloader, 2000);
-    this.setTimeout(preloaderHide, 1600);
+    this.setTimeout(preloaderHide, 2400);
   });
   function preloader() {
     document.querySelector(".body").classList.toggle("hide-scroll");
