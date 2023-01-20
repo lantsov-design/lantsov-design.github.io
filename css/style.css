@@ -1497,7 +1497,7 @@ a {
   height: 100vh;
   width: 100%;
   z-index: 200;
-  background-color: #fff;
+  background-color: #000;
   opacity: 100%;
   -webkit-transition: opacity ease-in 0.4s;
   transition: opacity ease-in 0.4s;
@@ -1530,7 +1530,7 @@ a {
   height: 16px;
   top: 12px;
   left: 15px;
-  background: #000;
+  background: #fff;
   border-radius: 50%;
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -1553,7 +1553,7 @@ a {
   width: 16px;
   height: 16px;
   margin-left: 16px;
-  background: #000;
+  background: #fff;
   border-radius: 50%;
 }
 
