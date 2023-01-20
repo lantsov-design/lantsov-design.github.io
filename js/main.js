@@ -119,7 +119,7 @@ window.addEventListener("resize", function () {
   */
 });
 let currentPageLocation = document.location.pathname;
-if (currentPageLocation != "/404.html" && currentPageLocation != "/pages/contacts.html") {
+if (currentPageLocation != "/404.html") {
   window.addEventListener("load", function () {
     this.setTimeout(preloader, 2000);
     this.setTimeout(preloaderHide, 1600);
