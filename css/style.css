@@ -3610,7 +3610,7 @@ Footer
 .aboutCTA-wrapper-imgwrap-img {
   max-height: 500px;
   height: 100%;
-  max-width: 525px;
+  max-width: 500px;
   width: 100%;
   pointer-events: none;
   -webkit-user-select: none;
