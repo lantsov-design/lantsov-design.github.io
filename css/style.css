@@ -1493,7 +1493,7 @@ a {
   display: block;
   visibility: visible;
   background: no-repeat url("../images/PreloaderLogo.svg") center;
-  background-size: 30%;
+  background-size: 200px 200px;
   height: 100vh;
   width: 100%;
   z-index: 200;
@@ -1501,6 +1501,12 @@ a {
   opacity: 100%;
   -webkit-transition: opacity ease-in 0.4s;
   transition: opacity ease-in 0.4s;
+}
+
+@media screen and (max-device-width: 576px), (max-device-width: 1334px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape), (max-device-width: 1334px) and (min-resolution: 2dppx) and (orientation: landscape) {
+  .preloader {
+    background-size: 120px 120px;
+  }
 }
 
 .preloader-hide-animate {
