@@ -6,7 +6,7 @@ function autocountAwards() {
   awardCardCount.forEach((element) => {
     awardCardCountArray.push(element);
   });
-  console.log(awardCardCountArray);
+  //console.log(awardCardCountArray);
   for (let i = 0; i < awardCardCountArray.length; i++) {
     let currentCountTitle = awardCardCountArray[i];
     if (i <= 8) {

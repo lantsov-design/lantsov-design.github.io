@@ -2,7 +2,7 @@
 
 let darkmodeStatus = false;
 let currentLocation = document.location.pathname;
-console.log(currentLocation);
+//console.log(currentLocation);
 
 //DARKMODE INIT
 window.addEventListener("load", function () {
@@ -83,10 +83,10 @@ darkmodeButton.addEventListener("click", function () {
 function setDarkmode() {
   if (darkmodeStatus == false) {
     setDark();
-    console.log("darkmode is on");
+    //console.log("darkmode is on");
   } else {
     setLight();
-    console.log("darkmode is off");
+    //console.log("darkmode is off");
   }
 }
 
@@ -114,7 +114,7 @@ function setDark() {
 
   //STATUS DARKMODE
   localStorage.setItem("darkmode", "true");
-  console.log(localStorage.getItem("darkmode"));
+  //console.log(localStorage.getItem("darkmode"));
   darkmodeStatus = true;
 }
 
@@ -142,7 +142,7 @@ function setLight() {
 
   //STATUS DARKMODE
   localStorage.setItem("darkmode", "false");
-  console.log(localStorage.getItem("darkmode"));
+  //console.log(localStorage.getItem("darkmode"));
   darkmodeStatus = false;
 }
 
