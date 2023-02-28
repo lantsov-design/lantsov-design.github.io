@@ -32,7 +32,7 @@ closeMenuButton.addEventListener("click", function () {
   document.querySelector(".bigMenu").classList.toggle("hide-block");
   document.querySelector(".body").classList.toggle("hide-scroll");
   document.querySelector(".bottomBar").classList.toggle("bottomBarZ");
-    document.querySelector(".bottomBar").classList.toggle("menu-active-bar");
+  document.querySelector(".bottomBar").classList.toggle("menu-active-bar");
 
   if (darkmodeStatus == false) {
     toDark();
@@ -120,19 +120,25 @@ window.addEventListener("resize", function () {
 });
 //Preloader
 let currentPageLocation = document.location.pathname;
-if (currentPageLocation != "/404.html") {
+if (
+  currentPageLocation == "/" ||
+  currentPageLocation == "/index.html" ||
+  currentPageLocation == "/pages/projects.html" ||
+  currentPageLocation == "/pages/contacts.html" ||
+  currentPageLocation == "/pages/about.html"
+) {
   window.addEventListener("load", function () {
     this.setTimeout(preloader, 2000);
     this.setTimeout(preloaderHide, 2400);
   });
   function preloader() {
     document.querySelector(".body").classList.toggle("hide-scroll");
-    document.querySelector(".preloader").classList.add("preloader-hide-animate");
+    document
+      .querySelector(".preloader")
+      .classList.add("preloader-hide-animate");
   }
   function preloaderHide() {
     document.querySelector(".preloader").classList.add("preloader-hide");
-  }  
+  }
 }
-console.log(currentPageLocation);
 console.log("The light in the darkness...");
-
