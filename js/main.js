@@ -133,5 +133,6 @@ if (currentPageLocation != "/404.html") {
     document.querySelector(".preloader").classList.add("preloader-hide");
   }  
 }
+console.log(currentPageLocation);
 console.log("The light in the darkness...");
 
