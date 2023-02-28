@@ -97,19 +97,15 @@ function setDark() {
   if (currentLocation == "/" || currentLocation == "/index.html") {
     ctaPageToDark();
     footerToDark();
-  }
-  if (currentLocation == "/pages/projects.html") {
+  } else if (currentLocation == "/pages/projects.html") {
     projectPageToDark();
-  }
-  if (currentLocation == "/404.html") {
-    errorPageToDark();
-  }
-  if (currentLocation == "/pages/contacts.html") {
+  } else if (currentLocation == "/pages/contacts.html") {
     contactPageToDark();
-  }
-  if (currentLocation == "/pages/about.html") {
+  } else if (currentLocation == "/pages/about.html") {
     aboutPageToDark();
     footerToDark();
+  } else {
+    errorPageToDark();
   }
 
   //STATUS DARKMODE
@@ -125,20 +121,16 @@ function setLight() {
   if (currentLocation == "/" || currentLocation == "/index.html") {
     ctaPageToLight();
     footerToLight();
-  }
-  if (currentLocation == "/pages/projects.html") {
+  } else if (currentLocation == "/pages/projects.html") {
     projectPageToLight();
-  }
-  if (currentLocation == "/404.html") {
-    errorPageToLight();
-  }
-  if (currentLocation == "/pages/contacts.html") {
+  } else if (currentLocation == "/pages/contacts.html") {
     contactPageToLight();
-  }
-  if (currentLocation == "/pages/about.html") {
+  } else if (currentLocation == "/pages/about.html") {
     aboutPageToLight();
     footerToLight();
-  }
+  } else {
+    errorPageToLight();
+  } 
 
   //STATUS DARKMODE
   localStorage.setItem("darkmode", "false");
