@@ -457,6 +457,7 @@ Settings
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   grid-column-gap: 40px;
+  grid-row-gap: 40px;
 }
 
 .grid_1_1ng {
@@ -2917,7 +2918,7 @@ Footer
      object-fit: cover;
   width: 220px;
   height: 341px;
-  background: url("../images/projectspage/Dr-strange.png") center no-repeat;
+  background: url("../images/projectspage/Notice Board.jpg") center no-repeat;
   background-size: 100%;
   -webkit-transition: background-size ease 0.5s;
   transition: background-size ease 0.5s;
@@ -2934,7 +2935,7 @@ Footer
      object-fit: cover;
   width: 220px;
   height: 341px;
-  background: url("../images/projectspage/Spider-men.png") center no-repeat;
+  background: url("../images/projectspage/Little Nightmare.jpg") center no-repeat;
   background-size: cover;
   background-size: 100%;
   -webkit-transition: background-size ease 0.5s;
