@@ -179,6 +179,7 @@
       }
     }
     &-language {
+      display: none; //Hidden language link
       @include text-light;
       color: setColor(light, primary);
       transition: color ease 0.4s;
