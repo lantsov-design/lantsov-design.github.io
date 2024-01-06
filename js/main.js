@@ -5,7 +5,7 @@ const moreButton = document.getElementById("moreButton");
 moreButton.addEventListener("click", function () {
   document.querySelector(".bigMenu").classList.toggle("hide-block");
   document.querySelector(".body").classList.toggle("hide-scroll");
-  document.querySelector(".bottomBar").classList.toggle("bottomBarZ");
+  //document.querySelector(".bottomBar").classList.toggle("bottomBarZ");
   document.querySelector(".bottomBar").classList.toggle("menu-active-bar");
 
   if (darkmodeStatus == false) {
@@ -31,7 +31,7 @@ const closeMenuButton = document.getElementById("closeMenu-button");
 closeMenuButton.addEventListener("click", function () {
   document.querySelector(".bigMenu").classList.toggle("hide-block");
   document.querySelector(".body").classList.toggle("hide-scroll");
-  document.querySelector(".bottomBar").classList.toggle("bottomBarZ");
+  //document.querySelector(".bottomBar").classList.toggle("bottomBarZ");
   document.querySelector(".bottomBar").classList.toggle("menu-active-bar");
 
   if (darkmodeStatus == false) {

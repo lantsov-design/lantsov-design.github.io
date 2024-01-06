@@ -72,7 +72,8 @@ let footerRightBlock = document.querySelector(".footer-leftBlock"),
   footerWatchProjectButtonUnderline = document.querySelector(
     ".footer-watchProject-line"
   ),
-  footerCopyright = document.querySelector(".footer-leftBlock-copyright");
+  footerCopyright = document.querySelector(".footer-leftBlock-copyright"),
+  footerMenuContact = document.querySelectorAll(".footer-menu-contact");
 
 //DARK BUTTON EVENT
 darkmodeButton.addEventListener("click", function () {
@@ -308,6 +309,9 @@ function footerToDark() {
   footerMenuItem.forEach((item) => {
     item.classList.add("menu-text-dark");
   });
+  footerMenuContact.forEach((item) => {
+    item.classList.add("menu-text-dark_no-hover");
+  });
   footerWatchProjectBlock.classList.add("bg-dark");
   footerWatchProjectButton.classList.add("dark-dark");
   footerWatchProjectButtonUnderline.classList.add("bg-body-dark");
@@ -320,6 +324,9 @@ function footerToLight() {
   footerLogo.classList.remove("primary-fill-dark");
   footerMenuItem.forEach((item) => {
     item.classList.remove("menu-text-dark");
+  });
+  footerMenuContact.forEach((item) => {
+    item.classList.remove("menu-text-dark_no-hover");
   });
   footerWatchProjectBlock.classList.remove("bg-dark");
   footerWatchProjectButton.classList.remove("dark-dark");

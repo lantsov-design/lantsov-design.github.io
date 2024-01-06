@@ -48,6 +48,10 @@ DARK MODE
     color: setColor(dark, primary) !important;
   }
 }
+.menu-text-dark_no-hover {
+  color: setColor(dark, secondary) !important;
+}
+
 .primary-vshover-dark {
   color: setColor(dark, primary) !important;
   &:hover {
