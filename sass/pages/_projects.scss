@@ -27,7 +27,7 @@
     align-items: space-between;
     justify-content: space-between;
 
-    padding: 0 20px;
+    padding: 0 30px;
 
     width: 100%;
 
@@ -55,6 +55,7 @@
     display: flex;
     flex-direction: row;
     right: 0;
+    padding-left: 10px;
 
     transition: transform ease 0.5s;
   }
@@ -430,6 +431,9 @@
     &-nav {
       display: none;
     }
+    &-cardWrapper {
+      padding-left: 0px;
+    }
   }
 }
 
@@ -438,6 +442,9 @@
   .projectsPage {
     &-nav {
       display: none;
+    }
+    &-cardWrapper {
+      padding-left: 0px;
     }
     &-projectCard {
       max-width: none;
