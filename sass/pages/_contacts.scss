@@ -7,10 +7,11 @@
 
   &-wrapper {
     align-items: center;
-    gap: 60px;
+    gap: 140px;
+    margin: 0 auto;
   }
   &-h3 {
-    margin-left: 90px;
+    //margin-left: 90px;
     line-height: 28px;
     &-span {
       border-bottom: setColor(light, primary) solid 1px;

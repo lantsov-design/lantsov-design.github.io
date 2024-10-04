@@ -3719,10 +3719,10 @@ Footer
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 60px;
+  gap: 140px;
+  margin: 0 auto;
 }
 .contactsPage-h3 {
-  margin-left: 90px;
   line-height: 28px;
 }
 .contactsPage-h3-span {
