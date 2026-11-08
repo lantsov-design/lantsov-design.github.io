@@ -11,11 +11,17 @@ let next = document.getElementById("projectsPage-rightButton"),
   viewWidth = window.innerWidth,
   cardsOnScreenCount = Math.floor(viewWidth / cardWidth),
   slideIndex = cardsOnScreenCount - cardsOnScreenCount,
-  maxSlideIndex = cardsCounts - cardsOnScreenCount,
-  trfRegExp = /[-0-9.]+(?=px)/;
+  maxSlideIndex = Math.max(0, cardsCounts - cardsOnScreenCount),
+  startPos = 0,
+  prevTranslate = 0,
+  isDragging = false,
+  hasDragged = false,
+  suppressClick = false,
+  pointerId = null;
 
 let slide = function () {
   sliderContainer.style.transition = "transform ease .5s";
+  prevTranslate = -slideIndex * cardWidth;
   sliderContainer.style.transform = `translate3d(-${
     slideIndex * cardWidth
   }px, 0px, 0px)`;
@@ -43,78 +49,82 @@ prev.addEventListener("click", function () {
   slide();
 });
 
-// Scroll with touch
-let startPos = 0,
-  currentTranlate = 0,
-  prevTranslate = 0,
-  isDragging = false,
-  slideArray = Array.from(projectCard);
+sliderContainer.style.touchAction = "pan-y";
 
-let animationID;
+sliderContainer.addEventListener("pointerdown", function (event) {
+  if (
+    !event.target.closest(".projectsPage-projectCard") ||
+    (event.pointerType === "mouse" && event.button !== 0)
+  ) {
+    return;
+  }
 
-slideArray.forEach((element) => {
-  element.addEventListener("touchstart", function (e) {
-    TouchStart(e);
-  });
-  element.addEventListener("touchmove", function (e) {
-    TouchMove(e);
-  });
-  element.addEventListener("touchend", function (e) {
-    TouchEnd(e);
-  });
+  suppressClick = false;
+  startPos = event.clientX;
+  pointerId = event.pointerId;
+  isDragging = true;
+  hasDragged = false;
 });
 
-function TouchStart(e) {
-  startPos = e.changedTouches[0].clientX;
-  isDragging = true;
-
-  animationID = requestAnimationFrame(animation);
-  //console.log(`Считывание startPos = ${startPos}`);
-}
-function TouchMove(e) {
-  if (isDragging) {
-    const currentPosition = e.changedTouches[0].clientX;
-    currentTranlate = prevTranslate + currentPosition - startPos;
+window.addEventListener("pointermove", function (event) {
+  if (!isDragging || event.pointerId !== pointerId) {
+    return;
   }
-}
-function TouchEnd(e) {
-  cancelAnimationFrame(animationID);
+
+  const distanceMoved = event.clientX - startPos;
+  if (!hasDragged && Math.abs(distanceMoved) > 5) {
+    hasDragged = true;
+    sliderContainer.setPointerCapture(pointerId);
+    sliderContainer.style.userSelect = "none";
+  }
+
+  if (hasDragged) {
+    const minTranslate = -maxSlideIndex * cardWidth;
+    const translate = Math.max(
+      minTranslate,
+      Math.min(0, prevTranslate + distanceMoved)
+    );
+    sliderContainer.style.transition = "none";
+    sliderContainer.style.transform = `translate3d(${translate}px, 0px, 0px)`;
+  }
+});
+
+function endDrag(event, cancelled = false) {
+  if (!isDragging || event.pointerId !== pointerId) {
+    return;
+  }
+
+  const distanceMoved = event.clientX - startPos;
+  const wasDragged = hasDragged && !cancelled;
   isDragging = false;
-  const distanceMove = currentTranlate - prevTranslate;
-  //console.log(`Текущий сдвиг свапа ${distanceMove}`);
+  hasDragged = false;
+  pointerId = null;
+  sliderContainer.style.userSelect = "";
 
-  if (distanceMove < -100 && slideIndex < maxSlideIndex) {
-    slideIndex += 1;
-    //console.log("Индекс увеличен на 1");
+  if (wasDragged) {
+    if (distanceMoved < -100 && slideIndex < maxSlideIndex) {
+      ++slideIndex;
+    } else if (distanceMoved > 100 && slideIndex > 0) {
+      --slideIndex;
+    }
+
+    suppressClick = true;
   }
-  if (distanceMove > 100 && slideIndex > 0) {
-    slideIndex -= 1;
-    //console.log("Индекс уменьшен на 1");
+
+  slide();
+}
+
+window.addEventListener("pointerup", endDrag);
+window.addEventListener("pointercancel", (event) =>
+  endDrag(event, true)
+);
+sliderContainer.addEventListener("click", function (event) {
+  if (suppressClick && event.detail !== 0) {
+    event.preventDefault();
+    event.stopPropagation();
+    suppressClick = false;
   }
-  //console.log("Функция перехвата окончания тача работает!");
-  setPositionByIndex();
-}
-
-function animation() {
-  setSliderPosition();
-  if (isDragging) requestAnimationFrame(animation);
-}
-
-function setPositionByIndex() {
-  currentTranlate = -slideIndex * cardWidth;
-  prevTranslate = currentTranlate;
-
-  prev.classList.toggle("hide", slideIndex === 0);
-  next.classList.toggle("hide", slideIndex === maxSlideIndex);
-
-  setSliderPosition();
-  //console.log(`Текущий индекс ${slideIndex}`)
-}
-
-function setSliderPosition() {
-  sliderContainer.style.transition = "transform ease 0.5s";
-  sliderContainer.style.transform = `translate3d(${currentTranlate}px, 0px, 0px)`;
-}
+}, true);
 
 window.addEventListener("resize", function () {
   (cardWidth = projectCard[0].offsetWidth),
@@ -123,12 +133,8 @@ window.addEventListener("resize", function () {
     (viewWidth = window.innerWidth),
     (cardsOnScreenCount = Math.floor(viewWidth / cardWidth)),
     (slideIndex = cardsOnScreenCount - cardsOnScreenCount),
-    (maxSlideIndex = cardsCounts - cardsOnScreenCount);
-  (sliderContainer.style.transform = `translate3d(0px, 0px, 0px)`),
-    (startPos = 0),
-    (currentTranlate = 0),
-    (prevTranslate = 0),
-    (isDragging = false);
+    (maxSlideIndex = Math.max(0, cardsCounts - cardsOnScreenCount));
+  slide();
 });
 
 // Autocount
